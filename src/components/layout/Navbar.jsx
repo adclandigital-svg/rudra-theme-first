@@ -189,8 +189,9 @@ export default function Navbar() {
 
           {/* Left Nav */}
           <nav className="nav-left">
+            <Link href="/">Home</Link>
             <Link href="/about">About</Link>
-            <Link href="/projects">Projects</Link>
+            
             {/* <Link href="/projects">Projects</Link> */}
           </nav>
 
@@ -208,7 +209,7 @@ export default function Navbar() {
 
           {/* Right Nav */}
           <nav className="nav-right">
-            <Link href="/contact">Contact</Link>
+            <Link href="/projects">Projects</Link>
             <button className="nav-btn">
               <span>Enquiry</span>
             </button>

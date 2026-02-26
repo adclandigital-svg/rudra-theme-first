@@ -153,4 +153,21 @@
   .blog-header h2 {
     font-size: 30px;
   }
+  .blog-content span{
+    font-size: 10px;
+    
+  }
+  .blog-content h3{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .blog-content p{
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  .blog-content button{
+    padding: 8px 20px;
+    font-size: 12px;
+  };
 }

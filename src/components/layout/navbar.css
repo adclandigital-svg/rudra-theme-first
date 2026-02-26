@@ -253,18 +253,19 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* Logo */
 .logo {
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-img {
-  width: 170px;
+  width: 150px;
   height: auto;
   object-fit: contain;
   transition: transform 0.4s ease;
@@ -280,6 +281,8 @@
   display: flex;
   gap: 40px;
   align-items: center;
+  justify-content: center;
+  width: 20%;
 }
 
 .nav-left a,
@@ -387,6 +390,12 @@
   .navbar-wrapper.scrolled {
     padding: 20px 20px;
   }
+  .logo {
+    width: auto;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
 }
 
 /* ============================= */
@@ -408,7 +417,7 @@
   right: 0;
   width: 300px;
   height: 100vh;
-  background: #000;
+  background: #064892;
   color: #fff;
   transform: translateX(100%);
   z-index: 999;

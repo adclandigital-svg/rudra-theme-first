@@ -158,6 +158,7 @@
 .about-section {
   padding: 140px 8%;
   background: var(--background);
+  overflow-x: hidden;
 }
 
 .about-wrapper {

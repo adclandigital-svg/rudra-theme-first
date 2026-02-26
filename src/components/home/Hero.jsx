@@ -105,7 +105,6 @@
 //   );
 // }
 
-
 // "use client";
 
 // import { useEffect, useRef } from "react";
@@ -238,7 +237,7 @@ export default function Hero() {
   useGSAP(
     () => {
       const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+        "(prefers-reduced-motion: reduce)",
       ).matches;
 
       if (prefersReducedMotion) return;
@@ -251,21 +250,13 @@ export default function Hero() {
         duration: 1.2,
         ease: "power4.out",
       })
-        .from(
-          subtitleRef.current,
-          { y: 60, opacity: 0, duration: 1 },
-          "-=0.7"
-        )
+        .from(subtitleRef.current, { y: 60, opacity: 0, duration: 1 }, "-=0.7")
         .from(
           buttonRef.current,
           { scale: 0.8, opacity: 0, duration: 0.8, ease: "back.out(1.7)" },
-          "-=0.6"
+          "-=0.6",
         )
-        .from(
-          cardRef.current,
-          { y: 50, opacity: 0, duration: 1 },
-          "-=0.8"
-        );
+        .from(cardRef.current, { y: 50, opacity: 0, duration: 1 }, "-=0.8");
 
       // Background animation
       bgRefs.current.forEach((img, index) => {
@@ -299,7 +290,7 @@ export default function Hero() {
         tl.kill();
       };
     },
-    { scope: sectionRef }
+    { scope: sectionRef },
   );
 
   return (
@@ -317,19 +308,18 @@ export default function Hero() {
 
       <div className="hero-overlay"></div>
 
-      <div className="hero-side-text">
-        LUXURY • ARCHITECTURE • DESIGN
-      </div>
+      <div className="hero-side-text">LUXURY • ARCHITECTURE • DESIGN</div>
 
       <div className="hero-content creative-content">
         <h1 ref={titleRef}>
-          Crafting <span>Timeless</span><br />
+          Crafting <span>Timeless</span>
+          <br />
           Living Spaces
         </h1>
 
         <p ref={subtitleRef}>
-          A modern real estate experience blending refined architecture,
-          premium materials, and thoughtfully designed living.
+          A modern real estate experience blending refined architecture, premium
+          materials, and thoughtfully designed living.
         </p>
 
         <div ref={buttonRef} className="hero-actions">
@@ -340,10 +330,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div ref={cardRef} className="hero-card">
-        <h4>Featured Project</h4>
-        <p>Sea View Residences</p>
-        <span>Starting ₹2.4 Cr</span>
+      <div  className="hero-card">
+        <h4>Rudra Build Presents</h4>
+        <p>Rudra Elite Heights</p>
+        <span>Premium 3 & 4 BHK Starting ₹1.65 Cr</span>
       </div>
     </section>
   );

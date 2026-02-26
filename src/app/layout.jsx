@@ -3,6 +3,7 @@ import "./globals.css";
 import LenisProvider from "@/providers/LenisProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ContactPopup from "@/components/layout/ContactPopup";
 
 const spectral = Spectral({
   weight: ["400", "500", "600", "700", "800"],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer/>
         </LenisProvider>
+        <ContactPopup/>
       </body>
     </html>
   );

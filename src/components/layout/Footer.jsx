@@ -58,6 +58,18 @@ import "./footer.css";
 //   );
 // }
 
+// "use client";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+
+import "./footer.css";
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="arch-footer">
@@ -65,10 +77,10 @@ export default function Footer() {
 
       <div className="arch-footer-container">
         
-        {/* Left Large Section */}
+        {/* LEFT SECTION */}
         <div className="arch-footer-left">
           <h2>
-            Building the Future<br />
+            Building the Future <br />
             <span>of Luxury Living</span>
           </h2>
 
@@ -78,9 +90,10 @@ export default function Footer() {
           </button>
         </div>
 
-        {/* Right Grid Section */}
+        {/* RIGHT SECTION */}
         <div className="arch-footer-right">
 
+          {/* Company */}
           <div className="arch-col">
             <h4>Company</h4>
             <a href="#">About</a>
@@ -88,24 +101,48 @@ export default function Footer() {
             <a href="#">Careers</a>
           </div>
 
+          {/* Legal */}
           <div className="arch-col">
             <h4>Legal</h4>
             <a href="#">Privacy Policy</a>
-            <a href="#">Terms</a>
+            <a href="#">Terms & Conditions</a>
           </div>
 
+          {/* Contact */}
           <div className="arch-col">
             <h4>Contact</h4>
-            <p>Mumbai, India</p>
-            <p>+91 98765 43210</p>
-            <p>info@rudrabuild.com</p>
+            <p>Noida, India</p>
+            <p>+919560895659</p>
+            <p>info@rudrabuildwell.com</p>
+          </div>
+
+          {/* Social */}
+          <div className="arch-col">
+            <h4>Follow Us</h4>
+            <div className="arch-socials">
+              <a href="https://www.facebook.com/" target="_blank">
+                <FaFacebookF />
+              </a>
+
+              <a href="https://www.instagram.com/" target="_blank">
+                <FaInstagram />
+              </a>
+
+              <a href="https://www.linkedin.com/" target="_blank">
+                <FaLinkedinIn />
+              </a>
+
+              <Link href="https://www.youtube.com/" target="_blank">
+                <FaYoutube />
+              </Link>
+            </div>
           </div>
 
         </div>
       </div>
 
       <div className="arch-footer-bottom">
-        © {new Date().getFullYear()} Rudra Build — Crafted with Precision
+        © {new Date().getFullYear()} Rudra Buildwell — Crafted with Precision
       </div>
     </footer>
   );

@@ -1,0 +1,248 @@
+/* ===============================
+   OVERLAY
+================================= */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Prevent edge touching on small screens */
+  z-index: 9999;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ===============================
+   POPUP CARD
+================================= */
+.popup-container {
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh; /* Prevent overflow on short screens */
+  overflow-y: auto; /* Scroll if needed */
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 50px 40px;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  animation: scaleUp 0.5s ease forwards;
+  font-family: var(--font-spectral);
+}
+
+/* Hide scrollbar but allow scroll */
+.popup-container::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* ===============================
+   CLOSE BUTTON
+================================= */
+.popup-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: rgb(0, 0, 0);
+}
+
+.popup-close:hover {
+  color: var(--color-hover);
+  transform: rotate(90deg);
+}
+
+/* ===============================
+   HEADING
+================================= */
+.popup-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.popup-container p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===============================
+   FORM
+================================= */
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup-form input,
+.popup-form textarea {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+  background-color: #fff;
+  width: 100%;
+}
+
+.popup-form textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.popup-form input:focus,
+.popup-form textarea:focus {
+  border-color: var(--color-hover);
+  box-shadow: 0 0 0 3px rgba(6, 72, 146, 0.1);
+}
+
+/* ===============================
+   SUBMIT BUTTON
+================================= */
+.popup-submit {
+  position: relative;
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 30px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  color: #000;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 15px;
+}
+
+/* Sliding background */
+.popup-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--color-hover);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.popup-submit:hover::before {
+  left: 0;
+}
+
+.popup-submit:hover {
+  color: #fff;
+  border-color: var(--color-hover);
+}
+
+/* ===============================
+   ANIMATIONS
+================================= */
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .popup-container {
+    max-width: 550px;
+    padding: 60px 50px;
+  }
+
+  .popup-container h2 {
+    font-size: 32px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .popup-container {
+    max-width: 480px;
+    padding: 45px 35px;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .popup-container {
+    padding: 40px 30px;
+    border-radius: 20px;
+  }
+
+  .popup-container h2 {
+    font-size: 24px;
+  }
+
+  .popup-container p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .popup-overlay {
+    padding: 15px;
+  }
+
+  .popup-container {
+    padding: 30px 20px;
+    border-radius: 18px;
+  }
+
+  .popup-container h2 {
+    font-size: 20px;
+  }
+
+  .popup-container p {
+    font-size: 12px;
+  }
+
+  .popup-submit {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Devices (320px phones) */
+@media (max-width: 360px) {
+  .popup-container {
+    padding: 25px 15px;
+  }
+
+  .popup-container h2 {
+    font-size: 18px;
+  }
+}
+
+/* Landscape Phones (short height screens) */
+@media (max-height: 600px) {
+  .popup-container {
+    max-height: 85vh;
+    padding: 30px 25px;
+  }
+}
