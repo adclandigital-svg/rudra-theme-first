@@ -13,17 +13,33 @@ export default function ServicesSection() {
 
   useGSAP(
     () => {
-      const cards = gsap.utils.toArray(".service-card");
+      if (!sectionRef.current) return;
 
-      gsap.from(cards, {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
+      const cards = gsap.utils.toArray(
+        sectionRef.current.querySelectorAll(".service-card"),
+      );
+
+      if (!cards.length) return;
+
+      // Make sure cards are visible initially
+      gsap.set(cards, { opacity: 1, y: 0 });
+
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top 75%",
+        once: true, // run only once
+        onEnter: () => {
+          gsap.fromTo(
+            cards,
+            { y: 60, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 1,
+              stagger: 0.2,
+              ease: "power3.out",
+            },
+          );
         },
       });
     },

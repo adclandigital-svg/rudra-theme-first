@@ -84,37 +84,56 @@
 
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./about.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSection() {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    gsap.from(".about-title", {
-      y: 60,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-    });
+  useGSAP(
+    () => {
+      gsap.from(".about-title", {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+      });
 
-    gsap.from(".about-para", {
-      y: 40,
-      opacity: 0,
-      duration: 1,
-      delay: 0.2,
-      ease: "power3.out",
-    });
+      gsap.from(".about-para", {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+      });
 
-    gsap.from(".about-img-box", {
-      x: 80,
-      opacity: 0,
-      duration: 1.2,
-      delay: 0.3,
-      ease: "power4.out",
-    });
-  }, []);
+      gsap.from(".about-img-box", {
+        x: 80,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.3,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+      });
+    },
+    { scope: sectionRef }
+  );
 
   return (
     <section ref={sectionRef} className="about-section">

@@ -1,0 +1,103 @@
+.horizontal-section {
+  width: 100%;
+  background: #0f0f0f;
+  color: #fff;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.horizontal-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.horizontal-header span {
+  color: #c9a96e;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.horizontal-header h2 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.horizontal-wrapper {
+  position: relative;
+}
+
+.horizontal-slider {
+  display: flex;
+  gap: 40px;
+  padding-left: 8%;
+}
+
+.horizontal-card {
+  position: relative;
+  min-width: 300px;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.horizontal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.horizontal-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.card-overlay h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.card-overlay p {
+  font-size: 14px;
+  color: #c9a96e;
+}
+
+/* Responsive */
+
+/* Hide mobile on desktop */
+.mobile-wrapper {
+  display: none;
+}
+
+/* Hide desktop on mobile */
+@media (max-width: 768px) {
+  .desktop-wrapper {
+    display: none;
+  }
+
+  .mobile-wrapper {
+    display: block;
+    padding: 0 20px;
+  }
+
+  .horizontal-card {
+    height: 380px;
+  }
+
+  .swiper-pagination-bullet {
+    background: #c9a96e !important;
+  }
+}
+

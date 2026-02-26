@@ -213,9 +213,13 @@
 
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./hero.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   "https://arinteriornew.vercel.app/hero4.avif",
@@ -229,73 +233,77 @@ export default function Hero() {
   const buttonRef = useRef(null);
   const cardRef = useRef(null);
   const bgRefs = useRef([]);
+  const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+  useGSAP(
+    () => {
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
 
-    if (prefersReducedMotion) return;
+      if (prefersReducedMotion) return;
 
-    const tl = gsap.timeline();
+      const tl = gsap.timeline();
 
-    tl.from(titleRef.current, {
-      y: 120,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
-    })
-      .from(
-        subtitleRef.current,
-        { y: 60, opacity: 0, duration: 1 },
-        "-=0.7"
-      )
-      .from(
-        buttonRef.current,
-        { scale: 0.8, opacity: 0, duration: 0.8, ease: "back.out(1.7)" },
-        "-=0.6"
-      )
-      .from(
-        cardRef.current,
-        { y: 50, opacity: 0, duration: 1 },
-        "-=0.8"
-      );
-
-    // Background animation
-    bgRefs.current.forEach((img, index) => {
-      gsap.set(img, { opacity: index === 0 ? 1 : 0, scale: 1.2 });
-    });
-
-    let current = 0;
-
-    const interval = setInterval(() => {
-      const next = (current + 1) % images.length;
-
-      gsap.to(bgRefs.current[current], {
+      tl.from(titleRef.current, {
+        y: 120,
         opacity: 0,
-        scale: 1,
-        duration: 2,
-        ease: "power2.inOut",
+        duration: 1.2,
+        ease: "power4.out",
+      })
+        .from(
+          subtitleRef.current,
+          { y: 60, opacity: 0, duration: 1 },
+          "-=0.7"
+        )
+        .from(
+          buttonRef.current,
+          { scale: 0.8, opacity: 0, duration: 0.8, ease: "back.out(1.7)" },
+          "-=0.6"
+        )
+        .from(
+          cardRef.current,
+          { y: 50, opacity: 0, duration: 1 },
+          "-=0.8"
+        );
+
+      // Background animation
+      bgRefs.current.forEach((img, index) => {
+        gsap.set(img, { opacity: index === 0 ? 1 : 0, scale: 1.2 });
       });
 
-      gsap.to(bgRefs.current[next], {
-        opacity: 1,
-        scale: 1.2,
-        duration: 2,
-        ease: "power2.inOut",
-      });
+      let current = 0;
 
-      current = next;
-    }, 6000);
+      const interval = setInterval(() => {
+        const next = (current + 1) % images.length;
 
-    return () => {
-      clearInterval(interval);
-      tl.kill();
-    };
-  }, []);
+        gsap.to(bgRefs.current[current], {
+          opacity: 0,
+          scale: 1,
+          duration: 2,
+          ease: "power2.inOut",
+        });
+
+        gsap.to(bgRefs.current[next], {
+          opacity: 1,
+          scale: 1.2,
+          duration: 2,
+          ease: "power2.inOut",
+        });
+
+        current = next;
+      }, 6000);
+
+      return () => {
+        clearInterval(interval);
+        tl.kill();
+      };
+    },
+    { scope: sectionRef }
+  );
 
   return (
-    <section className="hero creative-hero">
+    <section ref={sectionRef} className="hero creative-hero">
       <div className="hero-bg">
         {images.map((src, i) => (
           <img
