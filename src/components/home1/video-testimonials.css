@@ -1,6 +1,6 @@
 .review-section {
   padding: 50px 8%;
-  font-family: var(--font-spectral);
+  /* font-family: var(--font-spectral); */
   position: relative;
   z-index: 1;
 
@@ -15,7 +15,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   z-index: -1;
 }
 

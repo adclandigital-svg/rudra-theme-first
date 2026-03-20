@@ -16,11 +16,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    gsap.from(navRef.current, {
-      y: -80,
-      opacity: 0,
-      duration: 1,
-    });
+    // gsap.from(navRef.current, {
+    //   y: -80,
+    //   opacity: 0,
+    //   duration: 1,
+    // });
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 60);
@@ -78,6 +78,7 @@ export default function Navbar() {
               className={`hamburger ${menuOpen ? "active" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}
             >
+              <span></span>
               <span></span>
               <span></span>
             </div>
