@@ -34,6 +34,7 @@
   color: #000000; /* 🔴 changed */
   letter-spacing: 4px;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .updates-header h2 {

@@ -5,6 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import "./navbar.css";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Navbar() {
   const navRef = useRef(null);
@@ -66,7 +73,12 @@ export default function Navbar() {
       >
         <div className="navbar">
           <Link href="/" className="logo">
-            <Image src="/Rudra Logo white.png" alt="logo" width={150} height={60} />
+            <Image
+              src="/Rudra Logo white.png"
+              alt="logo"
+              width={150}
+              height={60}
+            />
           </Link>
           <div className="nav-righ">
             <Link href="#">Aquacasa</Link>
@@ -98,7 +110,7 @@ export default function Navbar() {
         </button>
 
         <nav ref={menuRef} className="sidebar-menu">
-          {/* PROJECT DROPDOWN */}
+          {/* PROJECTS */}
           <div className="sidebar-project">
             <div className="menu-link project-title">
               <span>01</span> Projects
@@ -124,29 +136,70 @@ export default function Navbar() {
           </div>
 
           <Link href="#" className="menu-link">
-            <span>02</span> Blogs
+            <span>02</span> About Rudra
           </Link>
 
-          <Link href="/about" className="menu-link">
-            <span>03</span> Gallery
+          <Link href="#" className="menu-link">
+            <span>03</span> Construction Updates
           </Link>
 
-          <Link href="/projects" className="menu-link">
+          <Link href="#" className="menu-link">
             <span>04</span> Media Centre
           </Link>
 
-          <Link href="/contact" className="menu-link">
-            <span>05</span> Construction Updates
+          <Link href="#" className="menu-link">
+            <span>05</span> Blogs
           </Link>
 
-          <Link href="/contact" className="menu-link">
-            <span>6</span> Job Openings
+          <Link href="#" className="menu-link">
+            <span>06</span> Testimonials
           </Link>
 
-          <Link href="/contact" className="menu-link">
-            <span>7</span> Reach Us
+          <Link href="#" className="menu-link">
+            <span>07</span> Awards & Recognitions
+          </Link>
+
+          <Link href="#" className="menu-link">
+            <span>08</span> Projects in JV & DMA
+          </Link>
+
+          <Link href="#" className="menu-link">
+            <span>09</span> Real Estate FAQs
+          </Link>
+
+          <Link href="#" className="menu-link">
+            <span>10</span> CSR
+          </Link>
+
+          <Link href="#" className="menu-link">
+            <span>11</span> Careers
+          </Link>
+
+          <Link href="#" className="menu-link">
+            <span>12</span> Reach Us
           </Link>
         </nav>
+        <div className="sidebar-bottom-section">
+          <div>
+            <a href="#" target="_blank">
+              <FaFacebookF />
+            </a>
+            <a href="#" target="_blank">
+              <FaInstagram />
+            </a>
+            <a href="#" target="_blank">
+              <FaLinkedinIn />
+            </a>
+            <a href="#" target="_blank">
+              <FaYoutube />
+            </a>
+            <a href=""><FaPhoneAlt /></a>
+          </div>
+          {/* <p className="phone">
+            <a><FaPhoneAlt /></a>
+            +91 9560895659
+          </p> */}
+        </div>
       </div>
     </>
   );

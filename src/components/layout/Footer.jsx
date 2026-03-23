@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="rudra-footer">
       <div className="rudra-footer-container">
 
-        {/* LEFT SECTION: Branding + CTA */}
+        {/* LEFT */}
         <div className="footer-left">
           <h2 className="footer-title">
             Building the Future <br />
@@ -23,58 +23,68 @@ export default function Footer() {
           <p className="footer-text">
             Explore our latest projects and discover homes crafted with precision and luxury.
           </p>
-          <a href="#" className="footer-btn">
+
+          <Link href="/brochure" className="footer-btn">
             Get Brochure <span className="arrow">↗</span>
-          </a>
+          </Link>
         </div>
 
-        {/* RIGHT SECTION: Links + Contact + Socials */}
+        {/* RIGHT */}
         <div className="footer-right">
 
-          {/* Company Links */}
+          {/* Company */}
           <div className="footer-col">
             <h4>Company</h4>
-            <Link href="#">About Us</Link>
-            <Link href="#">Projects</Link>
-            <Link href="#">Careers</Link>
-            <Link href="#">Blog</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/projects">Projects</Link>
+            <Link href="/careers">Careers</Link>
+            <Link href="/blogs">Blog</Link>
           </div>
 
-          {/* Projects */}
+          {/* Projects (match navbar) */}
           <div className="footer-col">
             <h4>Projects</h4>
-            <Link href="#">Residential</Link>
-            <Link href="#">Commercial</Link>
-            <Link href="#">Upcoming</Link>
-            <Link href="#">Luxury Villas</Link>
+            <Link href="/projects/aquacasa">Aquacasa</Link>
+            <Link href="/projects/palace-heights">Palace Heights</Link>
+            <Link href="/projects/pavo-real">Pavo Real</Link>
+            <Link href="/projects/skytracks">Skytracks</Link>
+            <Link href="/projects/uno">Uno</Link>
           </div>
 
           {/* Legal */}
           <div className="footer-col">
             <h4>Legal</h4>
-            <Link href="#">Privacy Policy</Link>
-            <Link href="#">Terms & Conditions</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms">Terms & Conditions</Link>
           </div>
 
-          {/* Contact & Social */}
+          {/* Contact */}
           <div className="footer-col">
             <h4>Contact</h4>
             <p>Noida, India</p>
-            <p>+91 9560895659</p>
-            <p>info@rudrabuildwell.com</p>
+
+            {/* Click to call */}
+            <a href="tel:+919560895659" className="footer-contact" style={{fontFamily:"none"}}>
+              +91 9560895659
+            </a>
+
+            {/* Email */}
+            <a href="mailto:info@rudrabuildwell.com" className="footer-contact">
+              info@rudrabuildwell.com
+            </a>
 
             <div className="footer-socials">
-              <a href="https://www.facebook.com/" target="_blank"><FaFacebookF /></a>
-              <a href="https://www.instagram.com/" target="_blank"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/" target="_blank"><FaLinkedinIn /></a>
-              <a href="https://www.youtube.com/" target="_blank"><FaYoutube /></a>
+              <a href="#" target="_blank"><FaFacebookF /></a>
+              <a href="#" target="_blank"><FaInstagram /></a>
+              <a href="#" target="_blank"><FaLinkedinIn /></a>
+              <a href="#" target="_blank"><FaYoutube /></a>
             </div>
           </div>
 
         </div>
       </div>
 
-      {/* Footer Bottom */}
+      {/* Bottom */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} Rudra Buildwell — Crafted with Precision
       </div>

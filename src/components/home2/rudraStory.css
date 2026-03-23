@@ -33,12 +33,13 @@
 /* LABEL */
 
 .rudra-label {
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #0a0a0a; /* 🔴 changed */
   margin-bottom: 16px;
   display: inline-block;
+  font-weight: 600;
 }
 
 /* TITLE */
@@ -49,6 +50,7 @@
   color: #111;
   margin-bottom: 24px;
 }
+
 .rudra-title span {
   font-weight: 600;
   color: #e70b03;
@@ -58,8 +60,8 @@
 
 .rudra-text {
   font-size: 18px;
-  line-height: 1.8;
-  color: #666;
+  line-height: 1.5;
+  color: #424242;
 }
 
 /* RIGHT STATS */
@@ -102,9 +104,9 @@
 /* LABEL */
 
 .stat p {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.5px;
-  color: #777;
+  color: #464646;
 }
 
 /* HOVER */

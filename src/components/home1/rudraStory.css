@@ -33,12 +33,13 @@
 /* LABEL */
 
 .rudra-label {
-  font-size: 13px;
-  letter-spacing: 4px;
+  font-size: 15px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #9e0500; /* 🔴 changed */
   margin-bottom: 16px;
   display: inline-block;
+  font-weight: 600;
 }
 
 /* TITLE */
@@ -55,8 +56,8 @@
 
 .rudra-text {
   font-size: 18px;
-  line-height: 1.8;
-  color: #666;
+  line-height: 1.6;
+  color: #464545;
 }
 
 /* RIGHT STATS */
@@ -99,7 +100,7 @@
 /* LABEL */
 
 .stat p {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: .5px;
   color: #777;
 }

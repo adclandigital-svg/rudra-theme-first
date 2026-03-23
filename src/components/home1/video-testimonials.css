@@ -24,9 +24,10 @@
 }
 
 .review-header span {
-  color: #e70b03; /* 🔴 changed */
+  color: #9e0500; /* 🔴 changed */
   letter-spacing: 3px;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .review-header h2 {

@@ -39,7 +39,7 @@ export default function LatestUpdates() {
 
         {/* BIG IMAGE */}
         <div className="update-large">
-          <img src={updates[0].img} alt="" fill className="update-img" />
+          <img src={updates[0].img} alt="" className="update-img" />
           <div className="update-overlay">
             <h3>{updates[0].title}</h3>
             <p>{updates[0].desc}</p>
@@ -48,7 +48,7 @@ export default function LatestUpdates() {
 
         {/* SMALL IMAGE */}
         <div className="update-small">
-          <img src={updates[1].img} alt="" fill className="update-img" />
+          <img src={updates[1].img} alt="" className="update-img" />
           <div className="update-overlay">
             <h3>{updates[1].title}</h3>
           </div>
@@ -56,7 +56,7 @@ export default function LatestUpdates() {
 
         {/* SMALL IMAGE */}
         <div className="update-small">
-          <img src={updates[2].img} alt="" fill className="update-img" />
+          <img src={updates[2].img} alt="" className="update-img" />
           <div className="update-overlay">
             <h3>{updates[2].title}</h3>
           </div>

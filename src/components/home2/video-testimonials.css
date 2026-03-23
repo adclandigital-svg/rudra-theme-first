@@ -1,6 +1,5 @@
 .review-section {
   padding: 50px 8%;
-  font-family: var(--font-spectral);
   position: relative;
   z-index: 1;
 
@@ -27,6 +26,7 @@
   color: #000000; /* 🔴 changed */
   letter-spacing: 3px;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .review-header h2 {

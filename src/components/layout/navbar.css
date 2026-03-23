@@ -35,7 +35,8 @@
 }
 
 .scrolled .logo img {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(5200%) hue-rotate(356deg) brightness(65%) contrast(115%);
+  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(5200%)
+    hue-rotate(356deg) brightness(65%) contrast(115%);
 }
 
 /* RIGHT NAV */
@@ -48,9 +49,19 @@
 
 .nav-righ a {
   font-size: 18px;
+  font-weight: 600; /* 👈 stronger visibility */
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
+  letter-spacing: 0.5px; /* 👈 better readability */
+  padding: 6px 10px; /* 👈 clickable area */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  /* 👇 glow for visibility */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.scrolled .nav-righ a {
+  text-shadow: none;
 }
 
 .scrolled .nav-righ a {
@@ -86,7 +97,7 @@
 }
 
 .scrolled .hamburger span {
-  background:#9e0500;
+  background: #9e0500;
 }
 
 .scrolled .hamburger:hover span {
@@ -133,9 +144,9 @@
   transform: translateX(100%);
   z-index: 999;
   background: #ffffff;
+
   display: flex;
-  flex-direction: column;
-  padding: 40px 30px;
+  flex-direction: column; /* important */
 }
 
 /* CLOSE BUTTON */
@@ -168,7 +179,7 @@
 /* LINKS */
 
 .menu-link {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   color: #111;
   text-decoration: none;
@@ -176,6 +187,8 @@
   align-items: center;
   gap: 12px;
   transition: 0.3s;
+  font-weight: 600;
+  padding-left: 25px;
 }
 
 .menu-link span {
@@ -234,7 +247,7 @@
 }
 
 .project-submenu .menu-link:hover {
-  color: #e10600;
+  color: #9e0500;
 }
 
 /* FOOTER */
@@ -283,4 +296,52 @@
   .project-submenu .menu-link {
     font-size: 14px;
   }
+}
+
+.sidebar-bottom-section {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  padding-left: 25px;
+}
+
+.sidebar-bottom-section div {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.sidebar-bottom-section a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  border-radius: 50%;
+  color: #111;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.sidebar-bottom-section a:hover {
+  background: #9e0500;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  font-family: none;
+  margin-bottom: 20px;
+}
+
+.phone svg {
+  font-size: 14px;
+  border-radius: 50%;
 }
