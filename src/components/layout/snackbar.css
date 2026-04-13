@@ -1,0 +1,103 @@
+.snackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background: rgba(42, 155, 150, 0.5); /* transparent */
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.snackbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.snackbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.snackbar a:hover {
+  background-color: #28807e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+}
+
+/* FLOATING CONTAINER */
+.floating-actions {
+  position: fixed;
+  right: 0%;
+  bottom: 50%;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* ROTATED ENQUIRY */
+.enquiry-rotate {
+  background: #2a9b96;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transform: rotate(-90deg);
+  transform-origin: right bottom;
+  position: relative;
+  right: 0px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.enquiry-rotate:hover {
+  background: #28807e;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  /* SNACKBAR */
+  .snackbar {
+    width: 90%;
+    padding: 10px;
+    border-radius: 30px;
+  }
+
+  .snackbar-links {
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* 👈 scroll instead of break */
+  }
+
+  .snackbar-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .snackbar a {
+    font-size: 14px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  /* FLOATING ACTIONS */
+  .floating-actions {
+    top: 35%;
+  }
+}

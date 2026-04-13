@@ -13,15 +13,15 @@ export default function Footer() {
   return (
     <footer className="rudra-footer">
       <div className="rudra-footer-container">
-
         {/* LEFT */}
         <div className="footer-left">
           <h2 className="footer-title">
-            Building the Future <br />
-            <span>of Luxury Living</span>
+            Your Future <br />
+            <span>Our Foundation</span>
           </h2>
           <p className="footer-text">
-            Explore our latest projects and discover homes crafted with precision and luxury.
+            Explore our latest projects and discover homes crafted with
+            precision and luxury.
           </p>
 
           <Link href="/brochure" className="footer-btn">
@@ -31,7 +31,6 @@ export default function Footer() {
 
         {/* RIGHT */}
         <div className="footer-right">
-
           {/* Company */}
           <div className="footer-col">
             <h4>Company</h4>
@@ -61,12 +60,16 @@ export default function Footer() {
           {/* Contact */}
           <div className="footer-col">
             <h4>Contact</h4>
-            <p>Noida, India</p>
+            <p>D-53 Okhla Phase-I New Delhi-110020</p>
 
             {/* Click to call */}
-            <a href="tel:+919560895659" className="footer-contact" style={{fontFamily:"none"}}>
+            {/* <a
+              href="tel:+919560895659"
+              className="footer-contact"
+              style={{ fontFamily: "none" }}
+            >
               +91 9560895659
-            </a>
+            </a> */}
 
             {/* Email */}
             <a href="mailto:info@rudrabuildwell.com" className="footer-contact">
@@ -74,13 +77,20 @@ export default function Footer() {
             </a>
 
             <div className="footer-socials">
-              <a href="#" target="_blank"><FaFacebookF /></a>
-              <a href="#" target="_blank"><FaInstagram /></a>
-              <a href="#" target="_blank"><FaLinkedinIn /></a>
-              <a href="#" target="_blank"><FaYoutube /></a>
+              <a href="#" target="_blank">
+                <FaFacebookF />
+              </a>
+              <a href="#" target="_blank">
+                <FaInstagram />
+              </a>
+              <a href="#" target="_blank">
+                <FaLinkedinIn />
+              </a>
+              <a href="#" target="_blank">
+                <FaYoutube />
+              </a>
             </div>
           </div>
-
         </div>
       </div>
 

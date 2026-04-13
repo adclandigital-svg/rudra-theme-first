@@ -24,7 +24,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-    font-family: var(--font-cormorant), serif;
+  font-family: var(--font-cormorantGaramond), serif;
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;

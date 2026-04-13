@@ -74,18 +74,18 @@ export default function Navbar() {
         <div className="navbar">
           <Link href="/" className="logo">
             <Image
-              src="/Rudra Logo white.png"
+              src="/Rudra Logo Png.png"
               alt="logo"
               width={150}
               height={60}
             />
           </Link>
           <div className="nav-righ">
-            <Link href="#">Aquacasa</Link>
+            {/* <Link href="#">Aquacasa</Link>
             <Link href="#">Palace Heights</Link>
             <Link href="#">Pavo Real</Link>
             <Link href="#">Skytracks</Link>
-            <Link href="#">Uno</Link>
+            <Link href="#">Uno</Link> */}
             <div
               className={`hamburger ${menuOpen ? "active" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}

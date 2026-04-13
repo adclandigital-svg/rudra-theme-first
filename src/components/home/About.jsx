@@ -1,186 +1,95 @@
-// "use client";
-
-// import { useEffect, useRef } from "react";
-// import gsap from "gsap";
-// import "./about.css";
-
-// export default function AboutSection() {
-//   const sectionRef = useRef(null);
-
-//   useEffect(() => {
-//     gsap.from(".about-heading", {
-//       y: 60,
-//       opacity: 0,
-//       duration: 1,
-//       ease: "power3.out",
-//     });
-
-//     gsap.from(".about-text", {
-//       y: 60,
-//       opacity: 0,
-//       duration: 1,
-//       delay: 0.2,
-//       ease: "power3.out",
-//     });
-
-//     gsap.from(".about-image-wrapper", {
-//       scale: 0.9,
-//       opacity: 0,
-//       duration: 1.2,
-//       delay: 0.3,
-//       ease: "power4.out",
-//     });
-//   }, []);
-
-//   return (
-//     <section ref={sectionRef} className="about-section">
-      
-//       {/* Background Watermark */}
-//       <div className="about-watermark">RUDRA</div>
-
-//       <div className="about-container">
-
-//         {/* Left Content */}
-//         <div className="about-content">
-//           <span className="about-subtitle">About Us</span>
-
-//           <h2 className="about-heading">
-//             Crafting Timeless Spaces <br /> That Define Lifestyle
-//           </h2>
-
-//           <div className="gold-line"></div>
-
-//           <p className="about-text">
-//             At <strong>Rudra Build</strong>, we don’t just construct buildings —
-//             we create architectural experiences that stand as symbols of
-//             excellence. With precision engineering, premium materials, and a
-//             passion for design, every project reflects trust, innovation, and
-//             lasting value.
-//           </p>
-
-//           <p className="about-text">
-//             Our vision is simple: deliver landmark developments that elevate
-//             communities and redefine modern living.
-//           </p>
-
-//           <button className="about-btn">
-//             Discover Our Vision →
-//           </button>
-//         </div>
-
-//         {/* Right Image */}
-//         <div className="about-image-wrapper">
-//           <img
-//             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-//             alt="Luxury Building"
-//             className="about-image"
-//           />
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./about.css";
 
-gsap.registerPlugin(ScrollTrigger);
+const images = [
+  "https://img.freepik.com/premium-photo/bright-apartment-complex-model-with-angled-view_1288520-5651.jpg?w=1060",
+  "https://img.freepik.com/premium-photo/high-angle-view-illuminated-city-street-buildings-night_1599837-110.jpg?w=740",
+  "https://img.freepik.com/premium-photo/altufievo-district-moscow-night-reflections-background-hd_199726-10516.jpg?w=740",
+  "https://img.freepik.com/premium-photo/sanya-hainan-china-january-25-2020-night-view-sanya-city-with-bright-multi-colored-illumination-buildings-structures-roads-sidewalks-poles-bridges_524378-1699.jpg",
+];
 
-export default function AboutSection() {
+export default function RudraAbout() {
   const sectionRef = useRef(null);
 
-  useGSAP(
-    () => {
-      gsap.from(".about-title", {
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-      });
+  const [index, setIndex] = useState(0); // ✅ MISSING (IMPORTANT)
+  const [animate, setAnimate] = useState(false);
 
-      gsap.from(".about-para", {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        delay: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-      });
+  // 🔁 Image Loop Animation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimate(true);
 
-      gsap.from(".about-img-box", {
-        x: 80,
-        opacity: 0,
-        duration: 1.2,
-        delay: 0.3,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-      });
-    },
-    { scope: sectionRef }
-  );
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % images.length);
+        setAnimate(false);
+      }, 800);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // 🎬 GSAP TEXT ANIMATION
+  useEffect(() => {
+    const el = sectionRef.current;
+
+    gsap.fromTo(
+      el.querySelectorAll(".animate"),
+      { y: 60, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+      },
+    );
+  }, []);
 
   return (
-    <section ref={sectionRef} className="about-section">
+    <>
+      <section className="rudra-about" ref={sectionRef}>
+        {/* LEFT */}
+        <div className="rudra-left">
+          {" "}
+          <h2 className="animate">
+            {" "}
+            Building Trust. <br /> Creating Landmarks.{" "}
+          </h2>{" "}
+          <p className="animate">
+            {" "}
+            <strong>Rudra Buildcon</strong> is a trusted name in real estate and
+            construction, delivering high-quality residential and commercial
+            projects with precision and innovation. With a commitment to
+            excellence, we focus on creating spaces that combine functionality,
+            aesthetics, and long-term value.{" "}
+          </p>{" "}
+          <p className="animate">
+            {" "}
+            From concept to completion, our expert team ensures every project
+            meets global standards in design, safety, and sustainability. We
+            believe in transparency, timely delivery, and building long-lasting
+            relationships with our clients.{" "}
+          </p>{" "}
+          <button className="rudra-btn animate">
+            Explore Our Projects
+          </button>{" "}
+        </div>
 
-      <div className="about-wrapper">
+        {/* RIGHT IMAGE ANIMATION */}
+        <div className={`rudra-right ${animate ? "animate" : ""}`}>
+          <img src={images[index]} className="slide-img active" alt="current" />
 
-        {/* Image Side */}
-        <div className="about-img-box">
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-            alt="Luxury Real Estate"
+            src={images[(index + 1) % images.length]}
+            className="slide-img next"
+            alt="next"
           />
-
-          <div className="about-floating-card">
-            <h3>15+</h3>
-            <p>Years of Excellence</p>
-          </div>
         </div>
-
-        {/* Content Side */}
-        <div className="about-content">
-          <span className="about-label">ABOUT RUDRA BUILD</span>
-
-          <h2 className="about-title">
-            Designing Landmarks <br /> That Inspire Generations
-          </h2>
-
-          <div className="about-line"></div>
-
-          <p className="about-para">
-            At <strong>Rudra Build</strong>, we shape the future of living
-            through visionary architecture and uncompromising quality.
-            Every project reflects precision craftsmanship and refined
-            aesthetics.
-          </p>
-
-          <p className="about-para">
-            Our developments stand as lasting symbols of trust, elegance,
-            and innovation in modern real estate.
-          </p>
-
-          <button className="about-btn">
-            Explore Our Story →
-          </button>
-        </div>
-
-      </div>
-    </section>
+      </section>
+      
+    </>
   );
 }

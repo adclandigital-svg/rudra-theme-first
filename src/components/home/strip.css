@@ -1,0 +1,42 @@
+.feature-section {
+  max-width: 100%;
+  background-color: #2a9b96;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 50px 10%;
+  background-image:
+    linear-gradient(rgba(42, 155, 150, 0.9), rgba(10, 30, 30, 0.9)),
+    url("https://i.pinimg.com/736x/69/3a/3c/693a3cf0ce3300fa671c232d911ff4de.jpg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: repeat;
+}
+.feature-container {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.feature-item {
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+.feature-item h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.feature-item svg {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
