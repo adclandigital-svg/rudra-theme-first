@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer/>
         </LenisProvider>
-        {/* <ContactPopup/> */}
+        <ContactPopup/>
       </body>
     </html>
   );
