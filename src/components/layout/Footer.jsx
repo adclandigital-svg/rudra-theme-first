@@ -25,7 +25,7 @@ export default function Footer() {
           </p>
 
           <Link href="/brochure" className="footer-btn">
-            Get Brochure <span className="arrow">↗</span>
+            Get Brochure 
           </Link>
         </div>
 

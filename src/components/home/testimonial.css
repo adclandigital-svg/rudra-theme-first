@@ -5,7 +5,7 @@
   align-items: center;
   padding: 80px 50px;
   background-image:
-    linear-gradient(rgba(116, 143, 143, 0.118), rgba(255, 255, 255, 0.3)),
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
     url("https://i.pinimg.com/736x/7f/05/15/7f05159013ef1e18c05f7679c7c8bc18.jpg");
   background-size: 300px;
   background-repeat: repeat;
