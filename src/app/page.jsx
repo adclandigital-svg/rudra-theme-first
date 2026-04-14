@@ -3,6 +3,8 @@ import AboutSection from "@/components/home/About";
 import FeatureSection from "@/components/home/Strip";
 import Homereels from "@/components/home/Homereels";
 import Amenities from "@/components/home/Amenities";
+import NewsSection from "@/components/home/NewsSection";
+import TestimonialSection from "@/components/home/TestimonialSection";
 export default function Home() {
   return (
     <>
@@ -11,6 +13,8 @@ export default function Home() {
       <AboutSection />
       <Homereels />
       <Amenities/>
+      <NewsSection/>
+      <TestimonialSection/>
     </>
   );
 }

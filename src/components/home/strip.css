@@ -13,6 +13,7 @@
   background-position: bottom;
   background-repeat: repeat;
 }
+
 .feature-container {
   max-width: 1400px;
   display: grid;
@@ -39,4 +40,129 @@
 
 .feature-item:hover {
   transform: translateY(-5px);
+}
+
+/* =========================
+   LAPTOP (<= 1400px)
+========================= */
+@media (max-width: 1400px) {
+  .feature-section {
+    padding: 45px 6%;
+  }
+
+  .feature-container {
+    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr); /* clean 4 per row */
+    gap: 25px;
+  }
+
+  .feature-item h3 {
+    font-size: 16px;
+  }
+
+  .feature-item svg {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* =========================
+   SMALL LAPTOP (<= 1200px)
+========================= */
+@media (max-width: 1200px) {
+  .feature-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 22px;
+  }
+
+  .feature-section {
+    padding: 40px 5%;
+  }
+
+  .feature-item h3 {
+    font-size: 15px;
+  }
+
+  .feature-item svg {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* =========================
+   TABLET (<= 1024px)
+========================= */
+@media (max-width: 1024px) {
+  .feature-section {
+    padding: 40px 6%;
+  }
+
+  .feature-container {
+    gap: 25px;
+  }
+
+  .feature-item h3 {
+    font-size: 16px;
+  }
+
+  .feature-item svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* =========================
+   MOBILE (<= 768px)
+========================= */
+@media (max-width: 768px) {
+  .feature-section {
+    padding: 35px 20px;
+    background-size: cover; /* fix pattern scaling */
+  }
+
+  .feature-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 20px;
+  }
+
+  .feature-item {
+    padding: 15px;
+  }
+
+  .feature-item h3 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .feature-item svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (<= 480px)
+========================= */
+@media (max-width: 480px) {
+  .feature-section {
+    padding: 30px 15px;
+  }
+
+  .feature-container {
+    grid-template-columns: 1fr 1fr; /* still 2 but tighter */
+    gap: 15px;
+  }
+
+  .feature-item {
+    padding: 12px;
+  }
+
+  .feature-item h3 {
+    font-size: 13px;
+  }
+
+  .feature-item svg {
+    width: 26px;
+    height: 26px;
+  }
 }

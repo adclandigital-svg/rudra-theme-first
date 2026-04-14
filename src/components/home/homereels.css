@@ -102,35 +102,83 @@
 }
 
 /* =========================
-   <= 1400px
+   LARGE LAPTOP (<= 1500px)
+========================= */
+@media (max-width: 1500px) {
+  .reels-wrapper {
+    gap: 40px;
+    padding: 50px 30px;
+  }
+
+  .mySwiper {
+    width: 950px;
+  }
+
+  .reel-video {
+    width: 260px;
+  }
+
+  .swiper-slide-active .reel-video {
+    width: 330px;
+  }
+
+  /* RIGHT SIDE */
+  .reels-right {
+    padding: 50px 40px;
+  }
+
+  .project-title {
+    font-size: 42px;
+  }
+
+  .project-desc {
+    font-size: 16px;
+    max-width: 90%;
+  }
+}
+
+/* =========================
+   LAPTOP (<= 1400px)
 ========================= */
 @media (max-width: 1400px) {
   .reels-wrapper {
     gap: 30px;
   }
+
   .mySwiper {
-    width: 900px;
+    width: 780px;
   }
 
   .reel-video {
-    width: 250px;
+    width: 240px;
   }
 
   .swiper-slide-active .reel-video {
-    width: 320px;
+    width: 310px;
   }
 
-  .reels-heading-div {
-    font-size: 44px;
+  /* RIGHT SIDE */
+  .reels-right {
+    padding: 40px 30px;
+    gap: 18px;
+  }
+
+  .project-title {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+  }
+
+  .info-grid div {
+    font-size: 14px;
   }
 }
 
 /* =========================
-   <= 1200px
-========================= */
-
-/* =========================
-   <= 992px (tablet)
+   SMALL LAPTOP (<= 1200px)
 ========================= */
 @media (max-width: 1200px) {
   .reels-wrapper {
@@ -145,32 +193,33 @@
   }
 
   .reel-video {
-    width: 180px;
+    width: 200px;
   }
 
   .swiper-slide-active .reel-video {
-    width: 240px;
+    width: 260px;
   }
 
-  .reels-heading-div {
-    min-width: 100%;
-    font-size: 34px;
-    align-items: center;
+  /* RIGHT SIDE FULL WIDTH */
+  .reels-right {
+    width: 100%;
+    padding: 30px 20px;
     text-align: center;
-    height: auto;
+    align-items: center;
   }
-  .swiper-pagination {
-    display: none;
+
+  .project-title {
+    font-size: 32px;
   }
-  .reels-heading-div {
-    font-size: 30px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
+
+  .project-desc {
+    max-width: 100%;
+  }
+
+  .info-grid {
+    align-items: center;
   }
 }
-
 /* =========================
    <= 768px (small tablet)
 ========================= */
@@ -239,7 +288,7 @@
   }
 
   .swiper-slide-active .reel-video {
-    width: 350px;
+    width: 300px;
   }
 
   /* Center align slides */

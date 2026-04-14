@@ -191,7 +191,7 @@
 .menu-link {
   font-size: 20px;
   font-weight: 500;
-  color: #111;
+  color: #111 ;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -203,7 +203,7 @@
 
 .menu-link span {
   font-size: 12px;
-  color: #999;
+  color: #999 !important;
 }
 
 /* 🔴 HOVER RED */
@@ -253,7 +253,7 @@
 
 .project-submenu .menu-link {
   font-size: 18px;
-  color: #333;
+  color: #333 ;
 }
 
 .project-submenu .menu-link:hover {

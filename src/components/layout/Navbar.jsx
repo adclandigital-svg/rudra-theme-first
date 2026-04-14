@@ -112,7 +112,7 @@ export default function Navbar() {
         <nav ref={menuRef} className="sidebar-menu">
           {/* PROJECTS */}
           <div className="sidebar-project">
-            <div className="menu-link project-title">
+            <div className="menu-link ">
               <span>01</span> Projects
             </div>
 

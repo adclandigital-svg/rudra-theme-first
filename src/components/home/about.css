@@ -1,23 +1,18 @@
-/* rudra-about.css */
-
 .rudra-about {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 100px 8%;
   color: #111;
   position: relative;
   overflow: hidden;
-  /* 🔥 Pattern background */
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.90)),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
     url("https://www.puravankara.com/_next/image?url=%2Fimages%2Fhomeoverviewbg.webp&w=3840&q=75g");
   background-size: auto;
   background-position: bottom;
 }
 
-/* LEFT */
 .rudra-left {
   flex: 1;
   max-width: 800px;
@@ -34,6 +29,7 @@
   line-height: 1.5;
   margin-bottom: 15px;
   font-weight: 500;
+  padding-right: 40px;
 }
 
 .rudra-btn {
@@ -58,11 +54,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   text-align: center;
-  
 }
 
 .stat-box {
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   padding: 30px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
@@ -83,7 +78,6 @@
   font-size: 14px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .rudra-about {
     flex-direction: column;
@@ -92,9 +86,6 @@
   }
 }
 
-
-
-
 .rudra-right {
   position: relative;
   width: 700px;
@@ -102,7 +93,7 @@
   overflow: hidden;
   border-radius: 0px;
 
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* BASE */
@@ -138,6 +129,171 @@
 }
 
 
+/* =========================
+   LARGE LAPTOP (<= 1400px)
+========================= */
+@media (max-width: 1400px) {
+  .rudra-about {
+    padding: 90px 6%;
+    gap: 50px;
+  }
+
+  .rudra-left {
+    max-width: 600px;
+  }
+
+  .rudra-left h2 {
+    font-size: 36px;
+  }
+
+  .rudra-left p {
+    font-size: 17px;
+  }
+
+  .rudra-slider {
+    max-width: 500px;
+    height: 360px;
+  }
+}
+
+/* =========================
+   SMALL LAPTOP (<= 1200px)
+========================= */
+@media (max-width: 1200px) {
+  .rudra-about {
+    padding: 80px 5%;
+    gap: 40px;
+  }
+
+  .rudra-left {
+    max-width: 500px;
+  }
+
+  .rudra-left h2 {
+    font-size: 32px;
+  }
+
+  .rudra-left p {
+    font-size: 16px;
+  }
+
+  .rudra-slider {
+    max-width: 400px;
+    height: 320px;
+  }
+}
+
+/* =========================
+   TABLET (<= 1024px)
+========================= */
+@media (max-width: 1024px) {
+  .rudra-about {
+    padding: 80px 5%;
+    gap: 40px;
+  }
+
+  .rudra-left h2 {
+    font-size: 34px;
+  }
+
+  .rudra-left p {
+    font-size: 16px;
+  }
+
+  .rudra-right {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+/* =========================
+   MOBILE (<= 768px)
+========================= */
+@media (max-width: 768px) {
+  .rudra-about {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .rudra-left {
+    max-width: 100%;
+  }
+
+  .rudra-left h2 {
+    font-size: 28px;
+  }
+
+  .rudra-left p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .rudra-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  /* IMAGE FIX */
+  .rudra-right {
+    width: 100%;
+    height: 260px;
+    border-radius: 16px;
+  }
+
+  .slide-img {
+    border-radius: 16px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (<= 480px)
+========================= */
+@media (max-width: 480px) {
+  .rudra-about {
+    padding: 50px 15px;
+  }
+
+  .rudra-left h2 {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .rudra-left p {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.4;
+  }
+
+  .rudra-right {
+    height: 220px;
+  }
+}
 
 
+.rudra-right {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+}
 
+/* BASE IMAGE */
+.slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: opacity 1s ease, transform 4s ease;
+}
+
+/* ACTIVE IMAGE */
+.slide-img.active {
+  opacity: 1;
+  transform: scale(1); /* zoom in effect */
+  z-index: 2;
+}

@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "./about.css";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   "https://img.freepik.com/premium-photo/bright-apartment-complex-model-with-angled-view_1288520-5651.jpg?w=1060",
@@ -17,16 +20,11 @@ export default function RudraAbout() {
   const [index, setIndex] = useState(0); // ✅ MISSING (IMPORTANT)
   const [animate, setAnimate] = useState(false);
 
-  // 🔁 Image Loop Animation
+  // 🔁 Smooth Fade Loop
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimate(true);
-
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % images.length);
-        setAnimate(false);
-      }, 800);
-    }, 5000);
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 4000); // timing
 
     return () => clearInterval(interval);
   }, []);
@@ -44,6 +42,11 @@ export default function RudraAbout() {
         duration: 1,
         stagger: 0.2,
         ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%", // when section enters viewport
+          toggleActions: "play none none none", // play only once
+        },
       },
     );
   }, []);
@@ -79,17 +82,17 @@ export default function RudraAbout() {
         </div>
 
         {/* RIGHT IMAGE ANIMATION */}
-        <div className={`rudra-right ${animate ? "animate" : ""}`}>
-          <img src={images[index]} className="slide-img active" alt="current" />
-
-          <img
-            src={images[(index + 1) % images.length]}
-            className="slide-img next"
-            alt="next"
-          />
+        <div className="rudra-right">
+          {images.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              className={`slide-img ${i === index ? "active" : ""}`}
+              alt="project"
+            />
+          ))}
         </div>
       </section>
-      
     </>
   );
 }
