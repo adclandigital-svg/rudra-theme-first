@@ -63,7 +63,7 @@ export default function RudraAbout() {
           </h2>{" "}
           <p className="animate">
             {" "}
-            <strong>Rudra Buildcon</strong> is a trusted name in real estate and
+            <strong>Rudra Group</strong> is a trusted name in real estate and
             construction, delivering high-quality residential and commercial
             projects with precision and innovation. With a commitment to
             excellence, we focus on creating spaces that combine functionality,

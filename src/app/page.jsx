@@ -5,6 +5,7 @@ import Homereels from "@/components/home/Homereels";
 import Amenities from "@/components/home/Amenities";
 import NewsSection from "@/components/home/NewsSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
+import TeamSectionAlt from "@/components/home/TeamSectionAlt";
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
       <Amenities/>
       <NewsSection/>
       <TestimonialSection/>
+      <TeamSectionAlt/>
     </>
   );
 }
