@@ -74,7 +74,7 @@ export default function Navbar() {
         <div className="navbar">
           <Link href="/" className="logo">
             <Image
-              src="/Rudra Logo Png.png"
+              src="/logo.png"
               alt="logo"
               width={150}
               height={60}
