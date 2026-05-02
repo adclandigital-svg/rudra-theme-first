@@ -21,7 +21,7 @@ export default function LayoutPlan() {
       {/* IMAGE */}
       <div className="layout-image-wrap" onClick={() => setOpen(true)}>
         <img
-          src="/projects/aquacase/aquacasa-layout-big.jpg"
+          src="/projects/palace-heights/layout-big.jpg"
           alt="Aquacasa Layout Plan"
         />
       </div>
@@ -31,7 +31,7 @@ export default function LayoutPlan() {
         <div className="layout-modal" onClick={() => setOpen(false)}>
           <span className="close-btn">&times;</span>
           <img
-            src="http://rudrabuildwell.com/images/aquacasa-layout-big.jpg"
+            src="/projects/palace-heights/layout-big.jpg"
             alt="Full Layout"
             className="modal-img"
           />

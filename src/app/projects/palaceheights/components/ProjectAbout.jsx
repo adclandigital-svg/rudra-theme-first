@@ -49,27 +49,31 @@ export default function ProjectAbout() {
     <section className="project-about">
       {/* LEFT SIDE */}
       <div className="about-left">
-        <span className="subtitle">ABOUT AQUACASA</span>
+        <span className="subtitle">ABOUT PALACE HEIGHTS</span>
 
         <h2>
-          A Sanctuary Where Nature, Luxury <br /> & Modern Living Coexist
+          Smart Living Spaces Designed <br /> For Comfort & Value
         </h2>
 
         <p>
-          Imagine waking up to fresh breezes, natural light, and peaceful
-          surroundings. Aquacasa blends lakes, greenery, and modern living to
-          offer a refined lifestyle with world-class amenities.
+          Palace Heights by Rudra Group offers thoughtfully designed 1, 2, 3 & 4
+          BHK apartments in Greater Noida (West). These homes combine
+          affordability with modern living, featuring well-ventilated layouts,
+          spacious rooms, and a location that keeps you connected to everything
+          important.
+          Built for families who seek comfort without compromise, Palace Heights
+          delivers a balanced lifestyle with practical design, peaceful
+          surroundings, and long-term value.
         </p>
+
       </div>
 
       {/* RIGHT SIDE STATS */}
-      <div className="about-right">
-        <div className="stats-grid">
-          <Counter end={12} label="Residential Towers" />
-          <Counter end={25} label="Acres Development" />
-          <Counter end={500} label="Luxury Residences" />
-          <Counter end={70} label="Open Green Space %" />
-        </div>
+      <div className="stats-grid">
+        <Counter end={4} label="BHK Options Available" />
+        <Counter end={90} label="Apartments Garden Facing %" />
+        <Counter end={2} label="Swimming Pools" />
+        <Counter end={80} label="Open Green Area %" />
       </div>
     </section>
   );

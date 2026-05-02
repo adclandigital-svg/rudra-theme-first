@@ -6,28 +6,23 @@ import "./download.css";
 
 const files = [
   {
-    title: "Aquacasa Brochure",
-    file: "/projects/aquacase/AC-brochure-new.pdf",
+    title: "Palace Heights Brochure",
+    file: "/projects/palace-heights/PH-brochure-new.pdf",
     icon: <FaFilePdf />,
   },
   {
-    title: "Aquacasa Presentation",
-    file: "/projects/aquacase/rudra-aquacasa-presentation.pdf",
+    title: "Palace Heights Presentation",
+    file: "/projects/palace-heights/ph-ppt-july-2017.pdf",
     icon: <FaFileAlt />,
   },
   {
-    title: "Smart Homes Presentation",
-    file: "/projects/aquacase/Smart-Homes.pdf",
-    icon: <FaFileAlt />,
-  },
-  {
-    title: "Bhagidar Poster",
-    file: "/projects/aquacase/bhagidari_poster_AC.pdf",
+    title: "Palace Heights Bhagidari Poster",
+    file: "/projects/palace-heights/bhagidari_poster_PH.pdf",
     icon: <FaFilePdf />,
   },
   {
-    title: "Registration Certificate",
-    file: "/projects/aquacase/Registration-Certificare-ph.pdf",
+    title: "Palace Heights Registration Certificate",
+    file: "/projects/palace-heights/Registration-Certificare-ph.pdf",
     icon: <FaFilePdf />,
   },
 ];

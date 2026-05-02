@@ -7,27 +7,27 @@ export default function SampleFlatGallery() {
   const [activeImg, setActiveImg] = useState(null);
 
   const images = [
-    {
-      thumb: "/projects/aquacase/aquacasa-sf-big1.jpg",
-      full: "/projects/aquacase/aquacasa-sf-big1.jpg",
-      title: "Drawing / Dining",
-    },
-    {
-      thumb: "/projects/aquacase/aquacasa-sf-big2.jpg",
-      full: "/projects/aquacase/aquacasa-sf-big2.jpg",
-      title: "Master Bedroom",
-    },
-    {
-      thumb: "/projects/aquacase/aquacasa-sf-big3.jpg",
-      full: "/projects/aquacase/aquacasa-sf-big3.jpg",
-      title: "Kitchen",
-    },
-    {
-      thumb: "/projects/aquacase/aquacasa-sf-big4.jpg",
-      full: "/projects/aquacase/aquacasa-sf-big4.jpg",
-      title: "Toilets",
-    },
-  ];
+  {
+    thumb: "/projects/palace-heights/palaceheight-sf-big1.jpg",
+    full: "/projects/palace-heights/palaceheight-sf-big1.jpg",
+    title: "Kitchen",
+  },
+  {
+    thumb: "/projects/palace-heights/palaceheight-sf-big2.jpg",
+    full: "/projects/palace-heights/palaceheight-sf-big2.jpg",
+    title: "Drawing / Dining",
+  },
+  {
+    thumb: "/projects/palace-heights/palaceheight-sf-big3.jpg",
+    full: "/projects/palace-heights/palaceheight-sf-big3.jpg",
+    title: "Toilets",
+  },
+  {
+    thumb: "/projects/palace-heights/palaceheight-sf-big4.jpg",
+    full: "/projects/palace-heights/palaceheight-sf-big4.jpg",
+    title: "Master Bedroom",
+  },
+];
 
   return (
     <section className="gallery-section">

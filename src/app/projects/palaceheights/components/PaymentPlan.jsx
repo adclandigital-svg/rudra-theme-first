@@ -22,16 +22,16 @@ export default function PaymentPlan() {
     { stage: "On Notice for Possession", value: 5 },
   ];
   const terms = [
-    "The prices are subject to change without prior notice.",
-    "Area refers to super built-up including common areas.",
-    "Plans & specifications may change as per authority.",
-    "Booking subject to Builder Buyer Agreement.",
-    "Govt taxes & charges applicable.",
-    "Applicable taxes may change over time.",
-    "Cheque bounce must be cleared within 3 days.",
-    "Sales & cancellations subject to agreement.",
-    "Disputes fall under Arbitration Act, Delhi jurisdiction.",
-    "Payments must be made to official project accounts.",
+    "Prices are subject to change without prior notice.",
+    "Area refers to Super Built-up Area including common areas.",
+    "Plans, layouts, and specifications may change as per authority/architect.",
+    "Booking is subject to Builder Buyer Agreement terms.",
+    "Stamp duty, registration, and government charges are applicable.",
+    "Taxes will be charged as per prevailing rates.",
+    "Cheque bounce must be cleared within 3 working days, else booking may be cancelled.",
+    "All sales/cancellations are governed by application form & agreement.",
+    "Disputes fall under Arbitration Act, 1996 (Delhi jurisdiction).",
+    "Payments must be made to official project accounts only.",
   ];
 
   return (

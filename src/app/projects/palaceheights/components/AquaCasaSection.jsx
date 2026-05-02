@@ -18,65 +18,121 @@ import "./aquacasa.css";
 
 export default function AquaCasaSection() {
   const features = [
-    {
-      icon: <FaBook />,
-      title: "Library",
-      desc: "Peaceful reading space with curated books.",
-    },
+    // COMFORT
     {
       icon: <FaBuilding />,
-      title: "Business Lounge",
-      desc: "Work-friendly modern lounge setup.",
+      title: "Spacious Apartments",
+      desc: "Well-planned layouts with natural cross ventilation in every room.",
     },
     {
       icon: <FaTree />,
-      title: "Roof Top Club",
-      desc: "Relax with skyline views & greenery.",
+      title: "90% Garden Facing",
+      desc: "Most apartments overlook lush green landscapes or pool.",
     },
+    {
+      icon: <FaBuilding />,
+      title: "Modern Kitchen & Utility",
+      desc: "Large kitchen spaces with wide utility areas.",
+    },
+    {
+      icon: <FaBuilding />,
+      title: "High-Speed Elevators",
+      desc: "Smooth and fast lifts in every tower.",
+    },
+
+    // SECURITY & CONVENIENCE
+    {
+      icon: <MdSecurity />,
+      title: "CCTV Surveillance",
+      desc: "24/7 security monitoring across the complex.",
+    },
+    {
+      icon: <MdSecurity />,
+      title: "Intercom Facility",
+      desc: "Star configuration intercom in all apartments.",
+    },
+    {
+      icon: <FaBuilding />,
+      title: "Visitor Parking",
+      desc: "Dedicated parking for guests and visitors.",
+    },
+    {
+      icon: <FaBuilding />,
+      title: "Day Care Facility",
+      desc: "Safe and convenient space for children.",
+    },
+
+    // HIGH-TECH
     {
       icon: <FaWifi />,
       title: "Wi-Fi Enabled Club",
-      desc: "High-speed connectivity everywhere.",
+      desc: "Seamless connectivity in clubhouse areas.",
     },
     {
+      icon: <FaWifi />,
+      title: "Smart Connectivity",
+      desc: "IP-enabled apartments with modern tech support.",
+    },
+    {
+      icon: <MdSecurity />,
+      title: "Access Control System",
+      desc: "Boom barriers and controlled entry points.",
+    },
+
+    // LEISURE & SPORTS
+    {
       icon: <FaChild />,
-      title: "Tot Lot Area",
-      desc: "Safe and fun kids play zone.",
+      title: "Kids Play Area",
+      desc: "Tot lots, swings & sand pits for children.",
     },
     {
       icon: <FaRunning />,
       title: "Jogging Track",
-      desc: "Track designed for daily fitness.",
+      desc: "Dedicated tracks for fitness and walking.",
     },
     {
       icon: <MdSportsCricket />,
-      title: "Cricket Practice Pitch",
-      desc: "Professional practice facility.",
-    },
-    {
-      icon: <MdOutlineSportsKabaddi />,
-      title: "Skating Rink",
-      desc: "Smooth rink for all age groups.",
+      title: "Sports Facilities",
+      desc: "Large playground & cricket practice space.",
     },
     {
       icon: <GiGymBag />,
-      title: "Modern Gymnasium",
-      desc: "Equipped with advanced machines.",
+      title: "Gymnasium",
+      desc: "Fully equipped modern fitness center.",
     },
+
+    // LUXURY / CLUB
     {
-      icon: <GiMeditation />,
-      title: "Yoga & Meditation Hall",
-      desc: "Calm and peaceful environment.",
+      icon: <FaTree />,
+      title: "Private Clubhouse",
+      desc: "Exclusive club with premium amenities.",
     },
     {
       icon: <GiWaterDrop />,
-      title: "Water Filtration System",
-      desc: "Clean and safe water supply.",
+      title: "Swimming Pools",
+      desc: "Two swimming pools for residents.",
     },
     {
-      icon: <MdSecurity />,
-      title: "CCTV & Intercom",
-      desc: "24/7 security monitoring system.",
+      icon: <GiMeditation />,
+      title: "Spa & Wellness",
+      desc: "Steam, sauna & relaxation facilities.",
+    },
+
+    // ECO FRIENDLY
+    {
+      icon: <FaTree />,
+      title: "80% Open Green Area",
+      desc: "Large green spaces for all age groups.",
+    },
+    {
+      icon: <GiWaterDrop />,
+      title: "Water Recycling System",
+      desc: "Efficient reuse of water across the project.",
+    },
+    {
+      icon: <FaTree />,
+      title: "Solar Heating",
+      desc: "Energy-saving systems for common usage.",
     },
   ];
 

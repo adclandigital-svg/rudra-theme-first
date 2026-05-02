@@ -8,11 +8,11 @@ const specs = [
     items: [
       { label: "Walls", value: "Oil Bound Distemper" },
       { label: "Floor", value: "Vitrified Tiles" },
-      { label: "Ceiling", value: "Pop Cornice with Oil Bound Distemper" },
+      { label: "Ceiling", value: "POP Cornice with Oil Bound Distemper" },
       {
         label: "Doors",
         value:
-          "Internal: Flush Door Shutters / Skin Moulded Doors | Main: Polished Veneered / Laminated Flush Door",
+          "Internal: Flush Door Shutters / Skin Moulded Doors | Main Entrance: Polished Veneered / Laminated Flush Door",
       },
       {
         label: "Windows",
@@ -77,8 +77,7 @@ const specs = [
       },
       {
         label: "Others",
-        value:
-          "Modular Kitchen with Granite Top and Stainless Steel Sink",
+        value: "Granite Top with Stainless Steel Sink",
       },
       { label: "Switches", value: "Modular Switches" },
     ],
@@ -111,7 +110,7 @@ const specs = [
       {
         label: "Others",
         value:
-          "Shower Cubical, Branded China Ware & CP Fittings, Marble/Granite Counter",
+          "Shower Cubicle, Branded China Ware & CP Fittings, Marble / Granite Counter",
       },
       { label: "Switches", value: "Modular Switches" },
     ],
@@ -163,7 +162,7 @@ const specs = [
       {
         label: "Recreation",
         value:
-          "Commercial Complex, Car Wash, Health Club, Dance & Aerobics Studio",
+          "Commercial Complex, Car Wash, Health Club Facility, Dance & Aerobics Studio",
       },
       {
         label: "Sports",
@@ -173,17 +172,15 @@ const specs = [
       {
         label: "Club",
         value:
-          "Hi-Tech Play Station Zone, Lounge, Billiards/Pool Room, Multi-Purpose Hall, Rooftop Restaurant, Library",
+          "Hi-Tech Play Station Zone, Lounge, Billiards/Pool Room, Multi-Purpose Hall, Rooftop Restaurant & Library",
       },
       {
         label: "Kids Area",
-        value:
-          "Creche, Seesaws, Slides, Sand Pit & Party Area",
+        value: "Creche, Tot-Lots, Seesaws, Slides, Sand Pit & Party Area",
       },
       {
         label: "Utilities",
-        value:
-          "Centralized Water Treatment Plant for Potable Water",
+        value: "Centralized Water Treatment Plant for Potable Water",
       },
     ],
   },
