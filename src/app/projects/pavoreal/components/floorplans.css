@@ -1,0 +1,215 @@
+:root {
+  --accent: #288783;
+  --bg: #f4f4f4;
+}
+
+/* SECTION */
+.floor-wrapper {
+  margin: auto;
+  max-width: 1800px;
+  padding: 50px 0%;
+  background: rgb(255, 255, 255);
+  min-height: 90vh;
+}
+
+/* HEADING */
+.floor-heading {
+  text-align: center;
+  font-size: 56px;
+  color: var(--accent);
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* TABS */
+.floor-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 70px;
+}
+
+.floor-tabs button {
+  padding: 10px 22px;
+  /* border-radius: 30px; */
+  background: #e7e7e7;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  color: black;
+}
+
+.floor-tabs button:hover {
+  border-color: #288783;
+  color: var(--accent);
+}
+
+.floor-tabs button.active {
+  background: #288783;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(40, 135, 130, 0.411);
+}
+
+/* MAIN CARD */
+.floor-card {
+  margin: auto;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 60px;
+  border-radius: 18px;
+  /* box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08); */
+  position: relative;
+  overflow: hidden;
+  
+}
+
+/* subtle gold glow */
+.floor-card::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -40%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(176, 125, 45, 0.08), transparent);
+}
+
+/* IMAGE */
+.floor-image {
+  text-align: center;
+}
+
+.floor-image img {
+  width: 100%;
+  max-width: 420px;
+  transition: 0.5s ease;
+}
+
+.floor-image img:hover {
+  transform: scale(1.06);
+}
+
+.floor-image h3 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #222;
+}
+.floor-details{
+   max-width: 600px;
+
+}
+
+/* DETAILS */
+.floor-details h3 {
+  font-size: 34px;
+  margin-bottom: 8px;
+  color: #288783;
+}
+
+.floor-details p {
+  color: #288783;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* TABLE ROWS */
+.detail-row {
+  display: flex;
+ 
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.detail-row span {
+  color: #666;
+}
+
+.detail-row strong {
+  color: #288783;
+}
+
+/* hover row effect */
+.detail-row:hover {
+  padding-left: 5px;
+  color: var(--accent);
+}
+
+/* BUTTONS */
+.floor-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+}
+
+.floor-buttons button {
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.floor-buttons button:hover {
+  background: #000;
+  transform: translateY(-3px);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .floor-card {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .floor-heading {
+    font-size: 36px;
+  }
+
+  .floor-details h3 {
+    font-size: 26px;
+  }
+}
+
+
+/* ANIMATION WRAPPER */
+.animate {
+  animation: fadeSlide 0.6s ease;
+}
+
+/* FADE + SLIDE */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* IMAGE POP EFFECT */
+.floor-image img {
+  animation: zoomIn 0.6s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
