@@ -1,0 +1,33 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* VIDEO STYLING */
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* ensure video stays below overlay */
+.hero-video {
+  position: relative;
+  z-index: 1;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-video {
+    object-fit: cover;
+  }
+}
