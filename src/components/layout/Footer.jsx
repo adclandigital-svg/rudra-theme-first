@@ -25,7 +25,7 @@ export default function Footer() {
           </p>
 
           <Link href="/brochure" className="footer-btn">
-            Get Brochure 
+            Get Brochure
           </Link>
         </div>
 
@@ -44,9 +44,9 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Projects</h4>
             <Link href="/projects/aquacasa">Aquacasa</Link>
-            <Link href="/projects/palace-heights">Palace Heights</Link>
-            <Link href="/projects/pavo-real">Pavo Real</Link>
-            <Link href="/projects/skytracks">Skytracks</Link>
+            <Link href="/projects/palaceheights">Palace Heights</Link>
+            <Link href="/projects/pavoreal">Pavo Real</Link>
+            <Link href="/projects/skytrack">Skytrack</Link>
             <Link href="/projects/uno">Uno</Link>
           </div>
 

@@ -8,6 +8,7 @@ export default function LayoutPlan() {
 
   return (
     <section className="layout-section">
+
       {/* HEADING */}
       <div className="layout-head">
         <h2>Master Layout Plan</h2>
@@ -20,7 +21,7 @@ export default function LayoutPlan() {
       {/* IMAGE */}
       <div className="layout-image-wrap" onClick={() => setOpen(true)}>
         <img
-          src="/projects/pavo/serra-layout-big.jpg"
+          src="/projects/aquacase/aquacasa-layout-big.jpg"
           alt="Aquacasa Layout Plan"
         />
       </div>
@@ -30,7 +31,7 @@ export default function LayoutPlan() {
         <div className="layout-modal" onClick={() => setOpen(false)}>
           <span className="close-btn">&times;</span>
           <img
-            src="/projects/pavo/serra-layout-big.jpg"
+            src="http://rudrabuildwell.com/images/aquacasa-layout-big.jpg"
             alt="Full Layout"
             className="modal-img"
           />

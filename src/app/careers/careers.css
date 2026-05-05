@@ -1,0 +1,309 @@
+.carrers-main-conatiner {
+  width: 100%;
+  margin: auto;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url("https://i.pinimg.com/736x/7f/05/15/7f05159013ef1e18c05f7679c7c8bc18.jpg");
+  background-size: 300px;
+  background-repeat: repeat;
+}
+/* ===== HERO ===== */
+.careers-cta-new {
+  margin-top: 100px;
+  height: 350px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)),
+    url("https://img.magnific.com/free-photo/japan-urban-landscape-night-time_23-2148889540.jpg?t=st=1777962458~exp=1777966058~hmac=4e5bf6ad5b319a08b851dbc7edb50e3dc5a9261bc5d69089073d47bb73921992&w=2000")
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.careers-cta-inner {
+  color: #fff;
+}
+
+.careers-tag {
+  font-weight: 700;
+  color: #277572;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.careers-cta-new h2 {
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.careers-cta-new span {
+  color: #ffffff;
+}
+
+/* ===== CONTACT SECTION ===== */
+.careers-contact-wrapper {
+  max-width: 1600px;
+  display: flex;
+  gap: 50px;
+  padding: 80px 0%;
+  margin: auto;
+}
+
+/* LEFT */
+.careers-contact-left {
+  flex: 1;
+}
+
+.careers-contact-left h1 {
+  font-size: 42px;
+  color: #000;
+}
+
+.careers-contact-left p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0 30px;
+  max-width: 500px;
+}
+
+/* GRID */
+.careers-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* reduced from 25px */
+}
+
+/* INFO ITEM */
+.careers-info-item {
+  display: flex;
+  gap: 10px;
+  padding: 12px 14px;
+  background-image:
+    linear-gradient(#b7e2e1, #277572),
+    url("https://i.pinimg.com/736x/7f/05/15/7f05159013ef1e18c05f7679c7c8bc18.jpg");
+  background-size: 300px;
+  background-repeat: repeat;
+  border-radius: 10px;
+}
+
+/* ICON */
+.careers-info-item svg {
+  color: #fff;
+  margin-top: 2px;
+}
+
+/* TEXT */
+.careers-info-item h4 {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.careers-info-item p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.careers-info-item span {
+  font-size: 15px;
+  color: #fff;
+}
+
+/* ===== FORM ===== */
+.careers-contact-form {
+  flex: 1;
+  background-image:
+    linear-gradient(rgba(61, 60, 60, 0.2), rgba(255, 255, 255, 0.3)),
+    url("https://i.pinimg.com/736x/7f/05/15/7f05159013ef1e18c05f7679c7c8bc18.jpg");
+  background-size: 300px;
+  background-repeat: repeat;
+  padding: 35px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.careers-contact-form h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #277572;
+  text-align: center;
+}
+.careers-contact-form p {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FORM STRUCTURE */
+.careers-contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.careers-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* INPUTS */
+.careers-contact-form input,
+.careers-contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.careers-contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.careers-contact-form input:focus,
+.careers-contact-form textarea:focus {
+  border-color: #277572;
+  box-shadow: 0 0 0 2px rgba(39, 117, 114, 0.1);
+  outline: none;
+}
+
+/* CHECKBOX */
+.careers-checkbox {
+  padding-left: 10px;
+  display: flex;
+  justify-content: start;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.careers-checkbox input {
+  width: auto;
+}
+
+/* BUTTON */
+.careers-contact-form button {
+  background: #277572;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.careers-contact-form button:hover {
+  background: transparent;
+  color: #277572;
+  outline: 1px solid #277572;
+  box-shadow: 0 8px 20px rgba(39, 117, 114, 0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .careers-contact-wrapper {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .careers-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-row {
+    flex-direction: column;
+  }
+
+  .careers-cta-new h2 {
+    font-size: 28px;
+  }
+}
+
+/* FORM SUBTEXT */
+.careers-form-sub {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* FILE INPUT */
+.careers-file {
+  border: 1px dashed #ccc;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.careers-file:hover {
+  border-color: #277572;
+}
+
+/* EXTRA SECTION */
+.careers-extra {
+  margin-top: 50px;
+}
+
+.careers-extra h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #277572;
+}
+
+.careers-extra ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 2 per row */
+  gap: 10px 20px;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.careers-extra li {
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+/* NOTE */
+.careers-note {
+  margin-top: 20px;
+  padding: 12px;
+  background: #f5f5f5;
+  border-left: 3px solid #277572;
+  font-size: 13px;
+  color: #555;
+}
+
+/* MINI CTA */
+.careers-cta-mini {
+  margin-top: 20px;
+}
+
+.careers-cta-mini p {
+  font-size: 13px;
+  color: #777;
+}
+
+.careers-cta-mini a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #277572;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.careers-cta-mini a:hover {
+  text-decoration: underline;
+}

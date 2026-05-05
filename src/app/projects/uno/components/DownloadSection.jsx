@@ -1,32 +1,34 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaFilePdf, FaFileAlt, FaExternalLinkAlt } from "react-icons/fa";
+import { FaFilePdf, FaFileAlt } from "react-icons/fa";
 import "./download.css";
 
 const files = [
   {
-    title: "Pavo Real Brochure",
-    file: "/projects/pavo/PavoReal-Brochure (1).pdf",
+    title: "Aquacasa Brochure",
+    file: "/projects/aquacase/AC-brochure-new.pdf",
     icon: <FaFilePdf />,
   },
   {
-    title: "Pavo Real Presentation",
-    file: "/projects/pavo/Pavo_Real_Presentation (1).pdf",
+    title: "Aquacasa Presentation",
+    file: "/projects/aquacase/rudra-aquacasa-presentation.pdf",
     icon: <FaFileAlt />,
   },
-];
-
-const partners = [
   {
-    name: "HDIL",
-    link: "http://www.hdil.in/",
-    logo: "http://rudrabuildwell.com/images/left-hdil-logo.jpg",
+    title: "Smart Homes Presentation",
+    file: "/projects/aquacase/Smart-Homes.pdf",
+    icon: <FaFileAlt />,
   },
   {
-    name: "Conclave",
-    link: "#",
-    logo: "http://rudrabuildwell.com/images/logo-conclave2.jpg",
+    title: "Bhagidar Poster",
+    file: "/projects/aquacase/bhagidari_poster_AC.pdf",
+    icon: <FaFilePdf />,
+  },
+  {
+    title: "Registration Certificate",
+    file: "/projects/aquacase/Registration-Certificare-ph.pdf",
+    icon: <FaFilePdf />,
   },
 ];
 
@@ -43,6 +45,7 @@ export default function DownloadPanel() {
   const isFilled =
     typeof window !== "undefined" && localStorage.getItem("userFilled");
 
+  // ✅ Auto-fill if already saved
   useEffect(() => {
     const saved = localStorage.getItem("userData");
     if (saved) {
@@ -50,6 +53,7 @@ export default function DownloadPanel() {
     }
   }, []);
 
+  // ✅ FORCE DOWNLOAD (may fallback if CORS blocks)
   const triggerDownload = async (url) => {
     try {
       const response = await fetch(url);
@@ -68,10 +72,11 @@ export default function DownloadPanel() {
       window.URL.revokeObjectURL(blobUrl);
     } catch (err) {
       console.error("Download failed:", err);
-      window.open(url, "_blank");
+      window.open(url, "_blank"); // fallback
     }
   };
 
+  // CLICK DOWNLOAD
   const handleDownload = (file) => {
     if (isFilled) {
       triggerDownload(file);
@@ -81,6 +86,7 @@ export default function DownloadPanel() {
     }
   };
 
+  // INPUT CHANGE
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -88,6 +94,7 @@ export default function DownloadPanel() {
     });
   };
 
+  // FORM SUBMIT
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -95,22 +102,22 @@ export default function DownloadPanel() {
     localStorage.setItem("userData", JSON.stringify(formData));
 
     setShowForm(false);
+
     await triggerDownload(selectedFile);
   };
 
   return (
     <>
+      {/* LEFT HOVER PANEL */}
       <div className="download-wrapper">
         <div className="download-hover-area">
           {/* TAB */}
           <div className="download-btn">
-            <span className="btn-text">Downloads & Partners</span>
+            <span className="btn-text">Download File</span>
           </div>
 
-          {/* DROPDOWN */}
+          {/* EXPAND PANEL */}
           <div className="download-dropdown">
-            {/* FILES */}
-            <div className="section-title">Downloads</div>
             {files.map((item, i) => (
               <div
                 key={i}
@@ -121,24 +128,6 @@ export default function DownloadPanel() {
                 {item.title}
               </div>
             ))}
-
-            {/* PARTNERS */}
-            <div className="section-title">Partners</div>
-            <div className="partner-list">
-              {partners.map((p, i) => (
-                <a
-                  key={i}
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="partner-item"
-                >
-                  <img src={p.logo} alt={p.name} />
-                  <span>{p.name}</span>
-                  <FaExternalLinkAlt className="ext-icon" />
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </div>

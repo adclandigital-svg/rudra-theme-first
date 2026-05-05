@@ -70,6 +70,12 @@
 .enquiry-rotate:hover {
   background: #28807e;
 }
+.snackbar a.active {
+  background: #28807e;
+  border-radius: 50px;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {

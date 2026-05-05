@@ -73,12 +73,7 @@ export default function Navbar() {
       >
         <div className="navbar">
           <Link href="/" className="logo">
-            <Image
-              src="/logo.png"
-              alt="logo"
-              width={150}
-              height={60}
-            />
+            <Image src="/logo.png" alt="logo" width={150} height={60} />
           </Link>
           <div className="nav-righ">
             {/* <Link href="#">Aquacasa</Link>
@@ -117,19 +112,19 @@ export default function Navbar() {
             </div>
 
             <div className="project-submenu">
-              <Link href="#" className="menu-link">
+              <Link href="/projects/aquacasa" className="menu-link">
                 <span>01</span> Aquacasa
               </Link>
-              <Link href="#" className="menu-link">
+              <Link href="/projects/palaceheights" className="menu-link">
                 <span>02</span> Palace Heights
               </Link>
-              <Link href="#" className="menu-link">
+              <Link href="/projects/pavoreal" className="menu-link">
                 <span>03</span> Pavo Real
               </Link>
-              <Link href="#" className="menu-link">
-                <span>04</span> Skytracks
+              <Link href="/projects/skytrack" className="menu-link">
+                <span>04</span> Skytrack
               </Link>
-              <Link href="#" className="menu-link">
+              <Link href="/projects/uno" className="menu-link">
                 <span>05</span> Uno
               </Link>
             </div>
@@ -193,7 +188,9 @@ export default function Navbar() {
             <a href="#" target="_blank">
               <FaYoutube />
             </a>
-            <a href=""><FaPhoneAlt /></a>
+            <a href="">
+              <FaPhoneAlt />
+            </a>
           </div>
           {/* <p className="phone">
             <a><FaPhoneAlt /></a>
