@@ -1,328 +1,560 @@
-/* Container */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px;
+.jv {
+  color: #111;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url("https://i.pinimg.com/736x/7f/05/15/7f05159013ef1e18c05f7679c7c8bc18.jpg");
+  background-size: 300px;
+  background-repeat: repeat;
+  width: 100%;
 }
 
-/* ================= HERO SECTION ================= */
-.hero {
-  position: relative;
-  height: 100vh;
-  min-height: 700px;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
-              url('https://images.unsplash.com/photo-1545328803-4f2a6b5c5e5f?w=2000') center/cover no-repeat;
+/* ================= HERO ================= */
+.jv-hero {
+  margin-top: 100px;
+  height: 90vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("https://img.magnific.com/premium-photo/modern-luxury-residential-apartment-buildings-with-outdoor-swimming-pool_1002465-178.jpg?w=2000")
+      center/cover;
   display: flex;
   align-items: center;
-  color: white;
+  padding: 0 80px;
 }
 
-.hero-content {
-  max-width: 800px;
-  z-index: 2;
+.jv-hero-content {
+  max-width: 650px;
+  color: #fff;
+  animation: fadeUp 1s ease;
 }
 
-.badge {
-  display: inline-block;
-  background: #ffd700;
-  color: #000;
+.jv-hero h1 {
+  font-size: 52px;
+  line-height: 1.2;
   font-weight: 600;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  margin-bottom: 20px;
 }
 
-.hero h1 {
-  font-size: 3.8rem;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  font-weight: 700;
+.jv-hero p {
+  margin-top: 15px;
+  color: #ddd;
+  line-height: 1.6;
 }
 
-.highlight {
-  color: #ffd700;
-}
-
-.hero-subtitle {
-  font-size: 1.35rem;
-  margin-bottom: 40px;
-  opacity: 0.95;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-.btn-primary {
-  background: #ffd700;
-  color: #000;
-  padding: 16px 36px;
-  font-size: 1.1rem;
-  font-weight: 600;
+.jv-hero button {
+  margin-top: 25px;
+  padding: 14px 32px;
   border: none;
-  border-radius: 8px;
+  border-radius: 40px;
+  background: rgb(39, 117, 115);
+  color: #fff;
   cursor: pointer;
-  transition: all 0.3s;
-}
-
-.btn-primary:hover {
-  background: #ffed4e;
-  transform: translateY(-3px);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 16px 36px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.btn-secondary:hover {
-  background: white;
-  color: #000;
-}
-
-.trust-bar {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  font-size: 1.05rem;
+  transition: 0.3s;
   font-weight: 500;
 }
 
-/* ================= SECTION STYLES ================= */
-.section-title {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 60px;
-  font-weight: 700;
-  color: #111;
+.jv-hero button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(39, 117, 115, 0.4);
 }
 
-/* Split Section */
-.split-section {
-  padding: 100px 0;
-  background: #f8f9fa;
-}
-
-.split-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.split-grid h2 {
-  font-size: 2.4rem;
-  margin-bottom: 24px;
-}
-
-.lead {
-  font-size: 1.25rem;
-  color: #444;
-}
-
-.feature-list {
-  list-style: none;
-}
-
-.feature-list li {
-  font-size: 1.2rem;
-  padding: 14px 0;
-  border-bottom: 1px solid #eee;
-}
-
-/* Timeline */
-.timeline-section {
-  padding: 120px 0;
-  background: white;
-}
-
-.timeline {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.timeline-step {
-  background: #f8f9fa;
-  padding: 40px 30px;
-  border-radius: 12px;
-  transition: all 0.3s;
-  border: 1px solid #eee;
-}
-
-.timeline-step:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-.step-number {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #ffd700;
-  margin-bottom: 16px;
-  opacity: 0.9;
-}
-
-/* Value Banner */
-.value-banner {
-  background: linear-gradient(135deg, #111, #222);
-  color: white;
-  padding: 100px 0;
-  text-align: center;
-}
-
-.value-banner h2 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-}
-
-.banner-sub {
-  font-size: 1.4rem;
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
-
-/* Benefits */
-.benefits-section {
-  padding: 120px 0;
-  background: #f8f9fa;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.benefit-card {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: all 0.3s;
-}
-
-.benefit-card:hover {
-  transform: translateY(-12px);
-}
-
-.benefit-card .icon {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-}
-
-/* Why NCR */
-.why-ncr {
-  padding: 100px 0;
-  text-align: center;
-  background: white;
-}
-
-.lead-text {
-  font-size: 1.35rem;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #444;
-}
-
-/* Projects */
-.projects-section {
-  padding: 120px 0;
-  background: #f8f9fa;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-.project-card {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: all 0.3s;
-}
-
-.project-card:hover {
-  transform: scale(1.03);
-}
-
-.project-image {
-  height: 240px;
-  background: linear-gradient(45deg, #ffd700, #ffaa00);
+/* ================= INTRO ================= */
+.jv-intro {
+  max-width: 1600px;
   display: flex;
+  gap: 60px;
+  padding: 100px 0px;
   align-items: center;
-  justify-content: center;
-  color: #000;
-  font-size: 1.4rem;
-  font-weight: 600;
+  margin: auto;
 }
 
-.project-card h3 {
-  padding: 20px 24px 8px;
-  font-size: 1.5rem;
+.jv-intro img {
+  width: 50%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.project-card p {
-  padding: 0 24px 24px;
+.jv-intro h2 {
+  font-size: 36px;
+  color: rgb(39, 117, 115);
+  margin-bottom: 10px;
+}
+
+.jv-intro p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ================= SPLIT ================= */
+/* ================= SPLIT REDESIGN ================= */
+.jv-split {
+  margin: auto;
+  max-width: 1600px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.jv-split-left {
+  flex: 1;
+}
+
+.jv-split-left h2 {
+  font-size: 34px;
+  color: rgb(39, 117, 115);
+  margin-bottom: 15px;
+}
+
+.jv-split-left p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CARDS */
+.jv-split-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.jv-split-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.jv-split-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border-color: rgb(39, 117, 115);
+}
+
+.jv-split-card svg {
+  font-size: 28px;
+  color: rgb(39, 117, 115);
+  margin-bottom: 10px;
+}
+
+.jv-split-card h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.jv-split-card p {
+  font-size: 14px;
   color: #666;
 }
 
-/* Final CTA */
-.final-cta {
-  background: linear-gradient(135deg, #111, #222);
-  color: white;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .jv-split {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .jv-split-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= TIMELINE ================= */
+/* ================= TIMELINE REDESIGN ================= */
+.jv-timeline {
+  padding: 100px 80px;
   text-align: center;
-  padding: 140px 20px;
 }
 
-.final-cta h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.jv-timeline h2 {
+  font-size: 36px;
+  color: rgb(39, 117, 115);
 }
 
-.final-cta p {
-  font-size: 1.4rem;
-  margin-bottom: 40px;
+.jv-timeline-sub {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* WRAPPER */
+.jv-timeline-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  position: relative;
+}
+
+/* CONNECTING LINE */
+.jv-timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ddd;
+  z-index: 0;
+}
+
+/* CARD */
+.jv-timeline-card {
+  width: 18%;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+
+.jv-timeline-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-color: rgb(39, 117, 115);
+}
+
+/* ICON */
+.jv-timeline-card .jv-icon {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 50%;
+  background: rgb(39, 117, 115);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* STEP NUMBER */
+.jv-timeline-card .step {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(39, 117, 115);
+  margin-bottom: 5px;
+}
+
+.jv-timeline-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.jv-timeline-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .jv-timeline-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .jv-timeline-wrapper::before {
+    display: none;
+  }
+
+  .jv-timeline-card {
+    width: 100%;
+  }
+}
+
+/* ================= BANNER ================= */
+.jv-banner {
+  height: 400px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e")
+      center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.jv-banner h2 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.jv-banner p {
+  color: #ddd;
+}
+
+/* ================= BENEFITS ================= */
+/* ================= BENEFITS REDESIGN ================= */
+.jv-benefits {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+/* HEADER */
+.jv-benefits-header {
+  max-width: 700px;
+  margin: auto;
+}
+
+.jv-benefits-header h2 {
+  font-size: 36px;
+  color: rgb(39, 117, 115);
+}
+
+.jv-benefits-header p {
+  margin-top: 10px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* GRID */
+.jv-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 60px;
+}
+
+/* CARD */
+.jv-benefit-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.jv-benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgb(39, 117, 115);
+}
+
+/* ICON */
+.jv-benefit-card .jv-icon {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 50%;
+  background: rgb(39, 117, 115);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.jv-benefit-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.jv-benefit-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .jv-benefits {
+    padding: 50px 20px;
+  }
+
+  .jv-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= PROJECTS ================= */
+/* ================= PROJECTS REDESIGN ================= */
+.jv-projects {
+  padding:50px 80px;
+  background: #fff;
+}
+
+/* HEADER */
+.jv-projects-header {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.jv-projects-header h2 {
+  font-size: 36px;
+  color: rgb(39, 117, 115);
+}
+
+.jv-projects-header p {
+  margin-top: 10px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* GRID */
+.jv-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* CARD */
+.jv-project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.jv-project-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+/* OVERLAY */
+.jv-project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  color: #fff;
+  transition: 0.4s;
+}
+
+.jv-project-overlay h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.jv-project-overlay p {
+  font-size: 14px;
   opacity: 0.9;
 }
 
-.btn-primary.large {
-  padding: 20px 48px;
-  font-size: 1.3rem;
+.jv-project-overlay span {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #ccc;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.8rem;
+/* HOVER EFFECT */
+.jv-project-card:hover img {
+  transform: scale(1.08);
+}
+
+.jv-project-card:hover .jv-project-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .jv-projects {
+    padding: 50px 20px;
   }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .split-grid {
+
+  .jv-project-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
   }
-  
-  .section-title {
-    font-size: 2.2rem;
+}
+
+/* ================= PARTNERS ================= */
+/* ================= PARTNERS REDESIGN ================= */
+/* ================= PARTNERS MODERN ================= */
+.jv-partners.jv-tabs-modern {
+  max-width: 1800px;
+  margin: auto;
+  padding: 50px 0px;
+}
+
+/* HEADER */
+.jv-partners-header {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.jv-partners-header h2 {
+  font-size: 36px;
+  color: rgb(39, 117, 115);
+}
+
+.jv-partners-header p {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* GRID */
+.jv-partner-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  gap: 30px;
+  margin-top: 60px;
+
+  justify-content: center; /* 👉 centers whole grid */
+}
+
+/* TAB CARD */
+.jv-tab {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.jv-tab:hover {
+  background: #fff;
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border-color: rgb(39, 117, 115);
+}
+
+/* TITLE */
+.jv-tab h3 {
+  margin-bottom: 20px;
+  color: rgb(39, 117, 115);
+}
+
+/* LOGOS GRID */
+.jv-logos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.jv-logos img {
+  width: 100px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.jv-logos img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .jv-partners.jv-tabs-modern {
+    padding: 50px 20px;
+  }
+
+  .jv-partner-tabs {
+    grid-template-columns: 1fr;
   }
 }
