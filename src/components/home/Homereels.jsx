@@ -10,7 +10,7 @@ import "./homereels.css";
 const projects = [
   {
     name: "Palace Heights",
-    src: "https://videocdn.cdnpk.net/videos/d572a146-7bb0-59c6-b479-cdd243965091/vertical/previews/watermarked/large.mp4",
+    src: "https://videocdn.cdnpk.net/videos/794bad83-871e-5616-afcd-046bd7c0f217/vertical/previews/watermarked/large.mp4",
     location: "Greater Noida",
     type: "High Rise Apartment",
     area: "2/3/4 BHK",
@@ -49,7 +49,7 @@ const projects = [
 
   {
     name: "Uno",
-    src: "https://videocdn.cdnpk.net/videos/d572a146-7bb0-59c6-b479-cdd243965091/vertical/previews/watermarked/large.mp4",
+    src: "https://videocdn.cdnpk.net/videos/25b9be54-b07b-50dd-8b22-ab8de0642358/vertical/previews/watermarked/large.mp4",
     location: "Ghaziabad",
     type: "Residential Project",
     area: "2/3 BHK",

@@ -3,7 +3,11 @@
   margin: 0 auto;
   margin-top: 100px;
   padding: 60px 20px;
-  background-color: #f9f7f4;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url("https://i.pinimg.com/736x/7f/05/15/7f05159013ef1e18c05f7679c7c8bc18.jpg");
+  background-size: 300px;
+  background-repeat: repeat;
 }
 
 .blog-header {
@@ -15,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5PX;
+  gap: 5px;
 }
 
 .blog-header h4 {
@@ -55,7 +59,9 @@
   background: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .blog-card:hover {

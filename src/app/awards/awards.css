@@ -1,0 +1,272 @@
+.awards-page {
+  color: #111;
+    background-image:
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url("https://i.pinimg.com/736x/7f/05/15/7f05159013ef1e18c05f7679c7c8bc18.jpg");
+  background-size: 300px;
+  background-repeat: repeat;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1600px;
+  margin: auto;
+}
+
+/* ================= HERO ================= */
+.awards-hero {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-image: url("https://img.magnific.com/premium-photo/luxury-penthouse-with-city-view_895118-37330.jpg?w=2000"); /* awards vibe */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* OVERLAY (important for text visibility) */
+.awards-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay */
+}
+
+/* CONTENT ABOVE IMAGE */
+.awards-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* TEXT */
+.awards-hero h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.awards-hero p {
+  margin: auto;
+  max-width: 800px;
+  color: #ddd;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+/* ================= SECTION ================= */
+.awards-section {
+  padding: 50px 0;
+}
+
+/* HEADING */
+.awards-section h2 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* PREMIUM UNDERLINE */
+.awards-section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: rgb(39, 117, 115);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* SUBTEXT */
+.section-sub {
+  text-align: center;
+  max-width: 700px;
+  margin: 10px auto 50px;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ================= GRID ================= */
+.awards-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.award-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+
+.award-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE */
+.award-img {
+  position: relative;
+}
+
+.award-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* YEAR BADGE */
+.award-img span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgb(39, 117, 115);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* CONTENT */
+.award-content {
+  padding: 20px;
+}
+
+.icon {
+  color: rgb(39, 117, 115);
+  margin-bottom: 10px;
+}
+
+.award-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.award-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-hero h1 {
+    font-size: 30px;
+  }
+}
+
+
+.award-card {
+  cursor: pointer;
+}
+
+/* MODAL BACKDROP */
+.award-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* MODAL BOX */
+.award-modal-box {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease;
+}
+
+/* IMAGE */
+.award-modal-box img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.modal-content {
+  padding: 20px;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.modal-content .desc {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* CLOSE BUTTON */
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: rgb(39,117,115);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #111;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgb(39, 117, 115);
+  color: #fff;
+}
