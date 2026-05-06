@@ -12,6 +12,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const navRef = useRef(null);
@@ -21,6 +22,12 @@ export default function Navbar() {
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     // gsap.from(navRef.current, {
@@ -130,47 +137,47 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="#" className="menu-link">
+          <Link href="/about" className="menu-link">
             <span>02</span> About Rudra
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/construction-updates" className="menu-link">
             <span>03</span> Construction Updates
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/media-centre" className="menu-link">
             <span>04</span> Media Centre
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/blogs" className="menu-link">
             <span>05</span> Blogs
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/testimonials" className="menu-link">
             <span>06</span> Testimonials
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/awards" className="menu-link">
             <span>07</span> Awards & Recognitions
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/jv-dma-projects" className="menu-link">
             <span>08</span> Projects in JV & DMA
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/faqs" className="menu-link">
             <span>09</span> Real Estate FAQs
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/csr" className="menu-link">
             <span>10</span> CSR
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/careers" className="menu-link">
             <span>11</span> Careers
           </Link>
 
-          <Link href="#" className="menu-link">
+          <Link href="/contact" className="menu-link">
             <span>12</span> Reach Us
           </Link>
         </nav>

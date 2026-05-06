@@ -9,7 +9,7 @@ import {
   CreditCard,
   CheckCircle,
 } from "lucide-react";
-
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
@@ -18,56 +18,69 @@ export default function ContactPage() {
   const leftRef = useRef(null);
   const formRef = useRef(null);
   const featuresRef = useRef(null);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    if (
+      !heroRef.current ||
+      !leftRef.current ||
+      !formRef.current ||
+      !featuresRef.current
+    )
+      return;
 
-    // HERO
-    tl.from(heroRef.current, {
-      opacity: 0,
-      y: 60,
-      duration: 1,
-      ease: "power3.out",
-    });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
 
-    // LEFT CONTENT (stagger)
-    tl.from(
-      leftRef.current.children,
-      {
+      // HERO
+      tl.from(heroRef.current, {
         opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-      "-=0.5"
-    );
-
-    // FORM (slide from right)
-    tl.from(
-      formRef.current,
-      {
-        opacity: 0,
-        x: 80,
+        y: 60,
         duration: 1,
         ease: "power3.out",
-      },
-      "-=0.6"
-    );
+      });
 
-    // FEATURES (stagger bottom)
-    tl.from(
-      featuresRef.current.children,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-      "-=0.4"
-    );
-  }, []);
+      // LEFT CONTENT
+      tl.from(
+        leftRef.current.children,
+        {
+          opacity: 0,
+          y: 40,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+        },
+        "-=0.5",
+      );
+
+      // FORM
+      tl.from(
+        formRef.current,
+        {
+          opacity: 0,
+          x: 80,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.6",
+      );
+
+      // FEATURES
+      // tl.from(
+      //   featuresRef.current.children,
+      //   {
+      //     opacity: 0,
+      //     y: 50,
+      //     duration: 0.8,
+      //     stagger: 0.2,
+      //     ease: "power3.out",
+      //   },
+      //   "-=0.4",
+      // );
+    });
+
+    return () => ctx.revert(); // cleanup
+  }, [pathname]); // 👈 KEY FIX
 
   return (
     <>
@@ -82,7 +95,6 @@ export default function ContactPage() {
       {/* CONTACT SECTION */}
       <section className="contact-section">
         <div className="contact-container">
-          
           {/* LEFT */}
           <div className="contact-left" ref={leftRef}>
             <h3>Speak With Us</h3>
@@ -97,7 +109,8 @@ export default function ContactPage() {
                 <div>
                   <strong>Office Address</strong>
                   <p>
-                    Rudra Buildwell Pvt. Ltd., Sector 63, Noida, Uttar Pradesh – 201301
+                    Rudra Buildwell Pvt. Ltd., Sector 63, Noida, Uttar Pradesh –
+                    201301
                   </p>
                 </div>
               </div>

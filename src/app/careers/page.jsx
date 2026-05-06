@@ -4,53 +4,59 @@ import "./careers.css";
 import { Mail, Phone, Smartphone, MapPin } from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
 
 export default function CareersPage() {
   const heroRef = useRef(null);
   const leftRef = useRef(null);
   const formRef = useRef(null);
 
+  const pathname = usePathname();
+
   useEffect(() => {
-    const tl = gsap.timeline();
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
 
-    // HERO ANIMATION
-    tl.from(heroRef.current, {
-      opacity: 0,
-      y: 60,
-      duration: 1,
-      ease: "power3.out",
-    });
-
-    // LEFT CONTENT STAGGER
-    tl.from(
-      leftRef.current.children,
-      {
+      // HERO
+      tl.from(heroRef.current, {
         opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-      },
-      "-=0.5"
-    );
-
-    // FORM SLIDE IN
-    tl.from(
-      formRef.current,
-      {
-        opacity: 0,
-        x: 80,
+        y: 60,
         duration: 1,
         ease: "power3.out",
-      },
-      "-=0.6"
-    );
-  }, []);
+      });
+
+      // LEFT CONTENT
+      tl.from(
+        leftRef.current.children,
+        {
+          opacity: 0,
+          y: 40,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+        },
+        "-=0.5",
+      );
+
+      // FORM
+      tl.from(
+        formRef.current,
+        {
+          opacity: 0,
+          x: 80,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.6",
+      );
+    });
+
+    return () => ctx.revert(); // cleanup (VERY IMPORTANT)
+  }, [pathname]);
 
   return (
     <>
       <div className="carrers-main-conatiner">
-
         {/* HERO */}
         <section className="careers-cta-new" ref={heroRef}>
           <div className="careers-cta-inner">
@@ -65,7 +71,6 @@ export default function CareersPage() {
 
         {/* CAREERS SECTION */}
         <section className="careers-contact-wrapper">
-
           {/* LEFT */}
           <div className="careers-contact-left" ref={leftRef}>
             <h1>Work With Us</h1>
@@ -161,7 +166,6 @@ export default function CareersPage() {
               <button type="submit">Submit Application</button>
             </form>
           </div>
-
         </section>
       </div>
     </>
