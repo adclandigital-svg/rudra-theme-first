@@ -1,0 +1,371 @@
+.about-hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  padding: 140px 20px 120px;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.about-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.68) 40%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+}
+
+.hero-gradient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+}
+
+.hero-gradient-1 {
+  width: 500px;
+  height: 500px;
+  background: #277572;
+  top: -120px;
+  left: -120px;
+}
+
+.hero-gradient-2 {
+  width: 400px;
+  height: 400px;
+  background: #d6b98c;
+  bottom: -120px;
+  right: -120px;
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ========================================= */
+/* LEFT */
+/* ========================================= */
+
+.about-left {
+  color: #ffffff;
+}
+
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.about-left h1 {
+  font-size: clamp(52px, 5vw, 70px);
+  line-height: 0.95;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.about-left h1 span {
+  color: #277572;
+}
+
+.about-left p {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 40px;
+}
+
+/* ========================================= */
+/* BUTTONS */
+/* ========================================= */
+
+.hero-actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.35s ease;
+}
+
+.hero-btn.primary {
+  background: #277572;
+  color: #ffffff;
+}
+
+.hero-btn.primary:hover {
+  transform: translateY(-4px);
+  background: #1d5b58;
+}
+
+.hero-btn.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.hero-btn.secondary:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* ========================================= */
+/* STATS */
+/* ========================================= */
+
+.hero-stats {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-stat h3 {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.hero-stat span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========================================= */
+/* RIGHT */
+/* ========================================= */
+
+.about-right {
+  position: relative;
+}
+
+.hero-main-card {
+  position: relative;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.hero-main-card img {
+  width: 100%;
+  height: 720px;
+  object-fit: cover;
+}
+
+.hero-main-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 40px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.hero-main-overlay span {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.hero-main-overlay h3 {
+  font-size: 40px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+/* ========================================= */
+/* FLOATING CARDS */
+/* ========================================= */
+
+.floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  width: 280px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.floating-card svg {
+  font-size: 26px;
+  color: #d6b98c;
+}
+
+.floating-card h4 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.floating-card p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card-1 {
+  top: 80px;
+  left: -60px;
+}
+
+.card-2 {
+  bottom: 80px;
+  right: -60px;
+}
+
+/* ========================================= */
+/* BOTTOM STRIP */
+/* ========================================= */
+
+.hero-bottom-strip {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.strip-track {
+  display: flex;
+  gap: 80px;
+  white-space: nowrap;
+  padding: 22px 0;
+  animation: marquee 18s linear infinite;
+}
+
+.strip-track span {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 1200px) {
+  .about-hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-main-card img {
+    height: 600px;
+  }
+
+  .card-1 {
+    left: 20px;
+  }
+
+  .card-2 {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 120px 16px 100px;
+    min-height: auto;
+  }
+
+  .about-left h1 {
+    line-height: 1.05;
+  }
+
+  .about-left p {
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    gap: 24px;
+  }
+
+  .hero-stat h3 {
+    font-size: 32px;
+  }
+
+  .hero-main-card img {
+    height: 420px;
+  }
+
+  .floating-card {
+    position: relative;
+    width: 100%;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin-top: 20px;
+  }
+
+  .hero-main-overlay h3 {
+    font-size: 28px;
+  }
+}

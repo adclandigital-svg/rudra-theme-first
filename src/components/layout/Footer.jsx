@@ -5,7 +5,9 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
+  FaPhoneAlt,
 } from "react-icons/fa";
+
 import Link from "next/link";
 import "./footer.css";
 
@@ -19,74 +21,118 @@ export default function Footer() {
             Your Future <br />
             <span>Our Foundation</span>
           </h2>
+
           <p className="footer-text">
-            Explore our latest projects and discover homes crafted with
-            precision and luxury.
+            Discover thoughtfully designed residential and commercial spaces by
+            Rudra Buildwell crafted for modern lifestyles, comfort and long-term
+            value.
           </p>
 
-          <Link href="/brochure" className="footer-btn">
-            Get Brochure
-          </Link>
+          {/* <Link href="/brochure" className="footer-btn">
+            Download Brochure
+          </Link> */}
         </div>
 
         {/* RIGHT */}
         <div className="footer-right">
-          {/* Company */}
+          {/* COMPANY */}
           <div className="footer-col">
             <h4>Company</h4>
+
+            <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
-            <Link href="/projects">Projects</Link>
+            <Link href="/media-centre">Media Centre</Link>
+            <Link href="/blogs">Blogs</Link>
+            <Link href="/testimonials">Testimonials</Link>
+            <Link href="/awards">Awards</Link>
             <Link href="/careers">Careers</Link>
-            <Link href="/blogs">Blog</Link>
+            <Link href="/contact">Reach Us</Link>
           </div>
 
-          {/* Projects (match navbar) */}
+          {/* PROJECTS */}
           <div className="footer-col">
             <h4>Projects</h4>
+
             <Link href="/projects/aquacasa">Aquacasa</Link>
-            <Link href="/projects/palaceheights">Palace Heights</Link>
+            <Link href="/projects/palaceheights">
+              Palace Heights
+            </Link>
             <Link href="/projects/pavoreal">Pavo Real</Link>
             <Link href="/projects/skytrack">Skytrack</Link>
             <Link href="/projects/uno">Uno</Link>
+            <Link href="/jv-dma-projects">
+              Projects in JV & DMA
+            </Link>
           </div>
 
-          {/* Legal */}
+          {/* QUICK LINKS */}
           <div className="footer-col">
-            <h4>Legal</h4>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms-and-conditions">Terms & Conditions</Link>
+            <h4>Quick Links</h4>
+
+            <Link href="/construction-updates">
+              Construction Updates
+            </Link>
+
+            <Link href="/faqs">Real Estate FAQs</Link>
+
+            <Link href="/csr">CSR Activities</Link>
+
+            <Link href="/privacy-policy">
+              Privacy Policy
+            </Link>
+
+            <Link href="/terms-and-conditions">
+              Terms & Conditions
+            </Link>
           </div>
 
-          {/* Contact */}
+          {/* CONTACT */}
           <div className="footer-col">
             <h4>Contact</h4>
+
             <p>D-53 Okhla Phase-I New Delhi-110020</p>
 
-            {/* Click to call */}
-            {/* <a
+            <a
               href="tel:+919560895659"
               className="footer-contact"
-              style={{ fontFamily: "none" }}
             >
+              <FaPhoneAlt />
               +91 9560895659
-            </a> */}
+            </a>
 
-            {/* Email */}
-            <a href="mailto:info@rudrabuildwell.com" className="footer-contact">
+            <a
+              href="mailto:info@rudrabuildwell.com"
+              className="footer-contact"
+            >
               info@rudrabuildwell.com
             </a>
 
             <div className="footer-socials">
-              <a href="#" target="_blank">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+              >
                 <FaFacebookF />
               </a>
-              <a href="#" target="_blank">
+
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
                 <FaInstagram />
               </a>
-              <a href="#" target="_blank">
+
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="#" target="_blank">
+
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+              >
                 <FaYoutube />
               </a>
             </div>
@@ -94,9 +140,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom */}
+      {/* BOTTOM */}
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Rudra Buildwell — Crafted with Precision
+        <p>
+          © {new Date().getFullYear()} Rudra Buildwell. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
