@@ -6,29 +6,9 @@ import "./download.css";
 
 const files = [
   {
-    title: "Aquacasa Brochure",
-    file: "/projects/aquacase/AC-brochure-new.pdf",
-    icon: <FaFilePdf />,
-  },
-  {
-    title: "Aquacasa Presentation",
-    file: "/projects/aquacase/rudra-aquacasa-presentation.pdf",
+    title: "Skytrack Presentation",
+    file: "/projects/skytrack/SkyTrack-presentation.pdf",
     icon: <FaFileAlt />,
-  },
-  {
-    title: "Smart Homes Presentation",
-    file: "/projects/aquacase/Smart-Homes.pdf",
-    icon: <FaFileAlt />,
-  },
-  {
-    title: "Bhagidar Poster",
-    file: "/projects/aquacase/bhagidari_poster_AC.pdf",
-    icon: <FaFilePdf />,
-  },
-  {
-    title: "Registration Certificate",
-    file: "/projects/aquacase/Registration-Certificare-ph.pdf",
-    icon: <FaFilePdf />,
   },
 ];
 

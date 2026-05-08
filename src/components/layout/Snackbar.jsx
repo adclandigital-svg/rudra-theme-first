@@ -37,7 +37,7 @@ export default function Snackbar() {
       </div>
 
       <div className="floating-actions">
-        <a href="#" className="enquiry-rotate">
+        <a href="/contact" className="enquiry-rotate">
           Enquiry Now
         </a>
       </div>

@@ -6,7 +6,7 @@ import "./floorplans.css";
 const floorPlans = [
   {
     title: "3BHK + Study - 1470 Sqft",
-    image: "http://rudrabuildwell.com/images/skytrack-fp1-big.jpg",
+    image: "/projects/skytrack/skytrack-fp1-big.jpg",
     area: "1470 Sqft",
     bedrooms: "3",
     bathrooms: "2",
@@ -15,7 +15,7 @@ const floorPlans = [
   },
   {
     title: "3BHK - 1350 Sqft",
-    image: "http://rudrabuildwell.com/images/skytrack-fp2-big.jpg",
+    image: "/projects/skytrack/skytrack-fp2-big.jpg",
     area: "1350 Sqft",
     bedrooms: "3",
     bathrooms: "2",
@@ -24,7 +24,7 @@ const floorPlans = [
   },
   {
     title: "2BHK + Study - 1155 Sqft",
-    image: "http://rudrabuildwell.com/images/skytrack-fp3-big.jpg",
+    image: "/projects/skytrack/skytrack-fp3-big.jpg",
     area: "1155 Sqft",
     bedrooms: "2",
     bathrooms: "2",
@@ -33,7 +33,7 @@ const floorPlans = [
   },
   {
     title: "2BHK - 960 Sqft",
-    image: "http://rudrabuildwell.com/images/skytrack-fp4-big.jpg",
+    image: "/projects/skytrack/skytrack-fp4-big.jpg",
     area: "960 Sqft",
     bedrooms: "2",
     bathrooms: "2",
@@ -42,7 +42,7 @@ const floorPlans = [
   },
   {
     title: "1BHK Type-1 - 685 Sqft",
-    image: "http://rudrabuildwell.com/images/skytrack-fp5-big.jpg",
+    image: "/projects/skytrack/skytrack-fp5-big.jpg",
     area: "685 Sqft",
     bedrooms: "1",
     bathrooms: "1",
@@ -51,7 +51,7 @@ const floorPlans = [
   },
   {
     title: "1BHK Type-2 - 685 Sqft",
-    image: "http://rudrabuildwell.com/images/skytrack-fp6-big.jpg",
+    image: "/projects/skytrack/skytrack-fp6-big.jpg",
     area: "685 Sqft",
     bedrooms: "1",
     bathrooms: "1",
@@ -60,7 +60,7 @@ const floorPlans = [
   },
   {
     title: "1BHK Type-2 - 685 Sqft",
-    image: "http://rudrabuildwell.com/images/skytrack-fp7-big.jpg",
+    image: "/projects/skytrack/skytrack-fp7-big.jpg",
     area: "685 Sqft",
     bedrooms: "1",
     bathrooms: "1",

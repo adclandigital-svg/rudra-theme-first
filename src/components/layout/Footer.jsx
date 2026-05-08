@@ -54,36 +54,26 @@ export default function Footer() {
             <h4>Projects</h4>
 
             <Link href="/projects/aquacasa">Aquacasa</Link>
-            <Link href="/projects/palaceheights">
-              Palace Heights
-            </Link>
+            <Link href="/projects/palaceheights">Palace Heights</Link>
             <Link href="/projects/pavoreal">Pavo Real</Link>
             <Link href="/projects/skytrack">Skytrack</Link>
             <Link href="/projects/uno">Uno</Link>
-            <Link href="/jv-dma-projects">
-              Projects in JV & DMA
-            </Link>
           </div>
 
           {/* QUICK LINKS */}
           <div className="footer-col">
             <h4>Quick Links</h4>
 
-            <Link href="/construction-updates">
-              Construction Updates
-            </Link>
+            <Link href="/construction-updates">Construction Updates</Link>
+            <Link href="/jv-dma-projects">Projects in JV & DMA</Link>
 
             <Link href="/faqs">Real Estate FAQs</Link>
 
             <Link href="/csr">CSR Activities</Link>
 
-            <Link href="/privacy-policy">
-              Privacy Policy
-            </Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
 
-            <Link href="/terms-and-conditions">
-              Terms & Conditions
-            </Link>
+            <Link href="/terms-and-conditions">Terms & Conditions</Link>
           </div>
 
           {/* CONTACT */}
@@ -92,47 +82,29 @@ export default function Footer() {
 
             <p>D-53 Okhla Phase-I New Delhi-110020</p>
 
-            <a
-              href="tel:+919560895659"
-              className="footer-contact"
-            >
+            <a href="tel:+919560895659" className="footer-contact">
               <FaPhoneAlt />
               +91 9560895659
             </a>
 
-            <a
-              href="mailto:info@rudrabuildwell.com"
-              className="footer-contact"
-            >
+            <a href="mailto:info@rudrabuildwell.com" className="footer-contact">
               info@rudrabuildwell.com
             </a>
 
             <div className="footer-socials">
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-              >
+              <a href="https://www.facebook.com/" target="_blank">
                 <FaFacebookF />
               </a>
 
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-              >
+              <a href="https://www.instagram.com/" target="_blank">
                 <FaInstagram />
               </a>
 
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/" target="_blank">
                 <FaLinkedinIn />
               </a>
 
-              <a
-                href="https://www.youtube.com/"
-                target="_blank"
-              >
+              <a href="https://www.youtube.com/" target="_blank">
                 <FaYoutube />
               </a>
             </div>

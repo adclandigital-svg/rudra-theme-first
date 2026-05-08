@@ -21,18 +21,21 @@ function Counter({ end, label }) {
 
           const timer = setInterval(() => {
             start += increment;
+
             if (start >= end) {
               start = end;
               clearInterval(timer);
             }
+
             setCount(Math.floor(start));
           }, 16);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (ref.current) observer.observe(ref.current);
+
     return () => observer.disconnect();
   }, [end]);
 
@@ -47,37 +50,39 @@ function Counter({ end, label }) {
 export default function ProjectAbout() {
   return (
     <section className="project-about">
-      
       {/* LEFT SIDE */}
       <div className="about-left">
-        <span className="subtitle">ABOUT SKYTRACK</span>
+        <span className="subtitle">ABOUT RUDRA UNO</span>
 
         <h2>
-          Presenting SKYLIFE – A Lifestyle <br /> High on Ambition & Adrenaline
+          Luxury Living
+          <br />
+          In The Heart Of Noida
         </h2>
 
         <p>
-          Presenting SKYLIFE. A life that will be peaceful yet exciting,
-          comfortable yet adventurous. A lifestyle high on ambition, high on
-          adrenaline, SKYLIFE will be your safe haven from the ever so congested
-          cities and its suffocating lanes.
+          Rudra Uno is a premium residential destination in Sector 150, Noida,
+          offering modern architecture, golf course views, lush green
+          landscapes, and world-class lifestyle amenities.
         </p>
 
         <p>
-          Be its proximity to the Yamuna Expressway or adjacent to an emerging
-          educational hub, the site also neighbors the upcoming world’s 4th
-          largest Night Safari, offering you all the more fun, entertainment and
-          thrill that a city life craves for.
+          With iconic towers, infinity pools, luxury club facilities, and
+          excellent connectivity to Noida Expressway and the upcoming Jewar
+          Airport, Rudra Uno delivers an elevated urban living experience.
         </p>
       </div>
 
       {/* RIGHT SIDE STATS */}
       <div className="about-right">
         <div className="stats-grid">
-          <Counter end={14} label="Residential Towers" />
-          <Counter end={9} label="Acres Development" />
-          <Counter end={1700} label="Residential Units" />
-          <Counter end={100} label="Connectivity Advantage" />
+          <Counter end={4} label="Luxury Towers" />
+
+          <Counter end={208} label="Premium Residences" />
+
+          <Counter end={33} label="Storey High Rise" />
+
+          <Counter end={4} label="Acres Development" />
         </div>
       </div>
     </section>
