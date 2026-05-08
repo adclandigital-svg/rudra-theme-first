@@ -1,0 +1,268 @@
+/* THEME COLORS */
+:root {
+  --primary: #277572;
+  --dark: #111111;
+  --light: #ffffff;
+  --text: #555555;
+  --border: #e9e9e9;
+  --bg-soft: #f7f9f9;
+}
+
+.team-section {
+  padding: 100px 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url("https://i.pinimg.com/736x/7f/05/15/7f05159013ef1e18c05f7679c7c8bc18.jpg");
+  background-size: 300px;
+  background-repeat: repeat;
+}
+
+.team-container {
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.team-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.team-text {
+  position: relative;
+  padding-right: 40px;
+  max-width: 760px;
+}
+
+.team-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.team-subtitle::before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.team-title {
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.95;
+  font-weight: normal;
+  color: var(--dark);
+  margin-bottom: 28px;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.team-title span {
+  color: var(--primary);
+}
+
+.team-divider {
+  width: 90px;
+  height: 5px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, var(--primary), var(--dark));
+  margin-bottom: 32px;
+}
+
+.team-description {
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+
+/* HIGHLIGHTS */
+.team-highlights {
+  display: flex;
+  gap: 18px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.highlight-item {
+  min-width: 150px;
+  padding: 24px 20px;
+  border-radius: 24px;
+  background: var(--bg-soft);
+  border: 1px solid rgba(39, 117, 114, 0.12);
+  transition: 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary), var(--dark));
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.highlight-item:hover::before {
+  opacity: 1;
+}
+
+.highlight-item h4,
+.highlight-item span {
+  position: relative;
+  z-index: 2;
+  transition: 0.4s ease;
+}
+
+.highlight-item h4 {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.highlight-item span {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.highlight-item:hover h4,
+.highlight-item:hover span {
+  color: var(--light);
+}
+
+.highlight-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(39, 117, 114, 0.2);
+}
+
+/* RIGHT SIDE */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+  
+}
+
+.team-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 22px 45px rgba(39, 117, 114, 0.22);
+}
+
+.team-image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.08);
+}
+
+.team-info {
+  position: absolute;
+  inset: auto 0 0 0;
+  background: linear-gradient(180deg, transparent, rgba(17, 17, 17, 0.92));
+  padding: 28px 20px 20px;
+  color: var(--light);
+  transition: 0.4s ease;
+}
+
+.team-card:hover .team-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.team-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .team-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .team-text {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .team-title {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-title {
+    font-size: 44px;
+    line-height: 1;
+  }
+
+  .team-description {
+    font-size: 16px;
+  }
+
+  .highlight-item {
+    flex: 1 1 calc(50% - 14px);
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-title {
+    font-size: 36px;
+  }
+
+  .highlight-item {
+    width: 100%;
+  }
+
+  .highlight-item h4 {
+    font-size: 28px;
+  }
+}

@@ -34,10 +34,11 @@
 }
 
 .aboutvision-left h2 {
-  font-size: clamp(40px, 3vw, 72px);
+  font-size: clamp(40px, 5vw, 72px);
   line-height: 1.1;
   margin-bottom: 24px;
   color: #111111;
+  font-weight: normal;
 }
 
 .aboutvision-left h2 span {
@@ -45,9 +46,9 @@
 }
 
 .aboutvision-left p {
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.6;
-  color: #666666;
+  color: #000000;
   margin-bottom: 14px;
   max-width: 720px;
 }
@@ -252,10 +253,6 @@
     line-height: 1.2;
   }
 
-  .aboutvision-grid {
-    grid-template-columns: 1fr;
-  }
-
   .img-box.large,
   .img-box.small {
     height: 380px;
@@ -275,5 +272,233 @@
 
   .vision-stats {
     gap: 30px;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .aboutvision-container {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .aboutvision-left {
+    max-width: 100%;
+  }
+
+  .aboutvision-left p {
+    max-width: 100%;
+  }
+
+  .aboutvision-grid {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .img-box.large {
+    height: 520px;
+  }
+}
+
+@media (max-width: 992px) {
+  .aboutvision-section {
+    padding: 90px 20px;
+  }
+
+  .aboutvision-left h2 {
+    font-size: 52px;
+  }
+
+  .vision-card {
+    padding: 80px 40px;
+  }
+
+  .vision-card h2 {
+    font-size: 48px;
+  }
+
+  .vision-stat h3 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutvision-section {
+    padding: 80px 16px;
+    background-size: 180px;
+  }
+
+  .aboutvision-container {
+    gap: 50px;
+  }
+
+  /* LEFT */
+  .aboutvision-tag {
+    font-size: 11px;
+    padding: 9px 16px;
+    margin-bottom: 22px;
+  }
+
+  .aboutvision-left h2 {
+    font-size: 40px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+
+  .aboutvision-left p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .aboutvision-points {
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .aboutvision-points div {
+    font-size: 15px;
+    align-items: flex-start;
+  }
+
+  .aboutvision-btn {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  /* GRID */
+  .aboutvision-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .img-box.large,
+  .img-box.small {
+    height: 320px;
+    margin: 0;
+    border-radius: 24px;
+  }
+
+  .experience-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 10px;
+    padding: 28px;
+    border-radius: 24px;
+  }
+
+  .experience-card h3 {
+    font-size: 42px;
+  }
+
+  /* VISION */
+  .vision-wrapper {
+    margin-top: 80px;
+  }
+
+  .vision-card {
+    padding: 60px 24px;
+    border-radius: 28px;
+  }
+
+  .vision-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .vision-tag {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .vision-card h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .vision-card p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .vision-stats {
+    margin-top: 45px;
+    gap: 24px;
+  }
+
+  .vision-stat h3 {
+    font-size: 38px;
+  }
+
+  .vision-stat span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutvision-section {
+    padding: 70px 14px;
+  }
+
+  .aboutvision-left h2 {
+    font-size: 32px;
+  }
+
+  .aboutvision-left p {
+    font-size: 14px;
+  }
+
+  .aboutvision-points div {
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .img-box.large,
+  .img-box.small {
+    height: 260px;
+  }
+
+  .experience-card {
+    padding: 24px;
+  }
+
+  .experience-card h3 {
+    font-size: 34px;
+  }
+
+  .experience-card p {
+    font-size: 14px;
+  }
+
+  .vision-card {
+    padding: 50px 20px;
+  }
+
+  .vision-card h2 {
+    font-size: 30px;
+  }
+
+  .vision-card p {
+    font-size: 14px;
+  }
+
+  .vision-stat h3 {
+    font-size: 30px;
+  }
+
+  .vision-stat span {
+    font-size: 13px;
+  }
+  .aboutvision-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
   }
 }

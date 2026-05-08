@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaArrowRight, FaBuilding, FaAward, FaCity } from "react-icons/fa";
 import "./imageShowcase.css";
 
 export default function AboutHero() {
@@ -30,10 +29,6 @@ export default function AboutHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="about-badge">
-            <FaBuilding />
-            ABOUT RUDRA
-          </span>
 
           <h1>
             Crafting <span>Luxury Landmarks</span> Across NCR
@@ -45,17 +40,6 @@ export default function AboutHero() {
             residences to modern integrated townships, every project is designed
             to elevate urban living experiences.
           </p>
-
-          <div className="hero-actions">
-            <a href="#about-story" className="hero-btn primary">
-              Explore Legacy
-              <FaArrowRight />
-            </a>
-
-            <a href="/projects" className="hero-btn secondary">
-              View Projects
-            </a>
-          </div>
 
           {/* STATS */}
           <div className="hero-stats">
