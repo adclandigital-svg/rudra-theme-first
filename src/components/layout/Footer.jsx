@@ -10,6 +10,7 @@ import {
 
 import Link from "next/link";
 import "./footer.css";
+import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -80,32 +81,44 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact</h4>
 
-            <p>D-53 Okhla Phase-I New Delhi-110020</p>
+            <p className="footer-contact">
+              <FaMapMarkerAlt /> &nbsp; D-53 Okhla Phase-I New Delhi-110020
+            </p>
 
             <a href="tel:+919560895659" className="footer-contact">
-              <FaPhoneAlt />
-              +91 9560895659
+              <FaPhoneAlt /> &nbsp; +91 9560895659
             </a>
 
             <a href="mailto:info@rudrabuildwell.com" className="footer-contact">
-              info@rudrabuildwell.com
+              <FaEnvelope /> &nbsp; info@rudrabuildwell.com
             </a>
 
             <div className="footer-socials">
-              <a href="https://www.facebook.com/" target="_blank">
+              <a
+                href="https://www.facebook.com/people/Rudra-Buildwell-Group/61573305010736/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebookF />
               </a>
 
-              <a href="https://www.instagram.com/" target="_blank">
+              <a
+                href="https://www.instagram.com/rudragroupofficials/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </a>
 
-              <a href="https://www.linkedin.com/" target="_blank">
-                <FaLinkedinIn />
-              </a>
-
-              <a href="https://www.youtube.com/" target="_blank">
+              <a
+                href="https://www.youtube.com/channel/UCORJTK0QPYB40-jDkY1hu9w"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaYoutube />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <FaLinkedinIn />
               </a>
             </div>
           </div>

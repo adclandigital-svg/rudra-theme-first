@@ -183,26 +183,42 @@ export default function Navbar() {
         </nav>
         <div className="sidebar-bottom-section">
           <div>
-            <a href="#" target="_blank">
+            <a
+              href="https://www.facebook.com/people/Rudra-Buildwell-Group/61573305010736/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </a>
-            <a href="#" target="_blank">
+
+            <a
+              href="https://www.instagram.com/rudragroupofficials/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
-            <a href="#" target="_blank">
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedinIn />
             </a>
-            <a href="#" target="_blank">
+
+            <a
+              href="https://www.youtube.com/channel/UCORJTK0QPYB40-jDkY1hu9w"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaYoutube />
             </a>
-            <a href="">
+
+            <a href="tel:+919999999999">
               <FaPhoneAlt />
             </a>
           </div>
-          {/* <p className="phone">
-            <a><FaPhoneAlt /></a>
-            +91 9560895659
-          </p> */}
         </div>
       </div>
     </>
