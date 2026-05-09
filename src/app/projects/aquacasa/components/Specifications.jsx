@@ -59,7 +59,7 @@ const specs = [
   },
 
   {
-    title: "Kitchen",
+    title: "Gourmet Kitchen",
     items: [
       {
         label: "Walls",
@@ -77,8 +77,7 @@ const specs = [
       },
       {
         label: "Others",
-        value:
-          "Modular Kitchen with Granite Top and Stainless Steel Sink",
+        value: "Modular Kitchen with Granite Top and Stainless Steel Sink",
       },
       { label: "Switches", value: "Modular Switches" },
     ],
@@ -99,7 +98,7 @@ const specs = [
   },
 
   {
-    title: "Master Toilet",
+    title: "Bath Suite",
     items: [
       { label: "Walls", value: "Ceramic Tiles up to 7 ft height" },
       { label: "Floor", value: "Anti-Skid Ceramic Tiles" },
@@ -118,7 +117,7 @@ const specs = [
   },
 
   {
-    title: "Other Toilets",
+    title: "Additional Bathrooms",
     items: [
       { label: "Walls", value: "Ceramic Tiles up to 7 ft height" },
       { label: "Floor", value: "Anti-Skid Vitrified Tiles" },
@@ -177,13 +176,11 @@ const specs = [
       },
       {
         label: "Kids Area",
-        value:
-          "Creche, Seesaws, Slides, Sand Pit & Party Area",
+        value: "Creche, Seesaws, Slides, Sand Pit & Party Area",
       },
       {
         label: "Utilities",
-        value:
-          "Centralized Water Treatment Plant for Potable Water",
+        value: "Centralized Water Treatment Plant for Potable Water",
       },
     ],
   },

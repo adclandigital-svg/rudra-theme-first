@@ -60,7 +60,7 @@ export default function TeamUnique() {
   return (
     <section className="team-unique" ref={container}>
       <h2>
-        Visionary <span>Leadership</span>
+        Pioneering <span>Vision</span>
       </h2>
 
       <p className="team-desc">

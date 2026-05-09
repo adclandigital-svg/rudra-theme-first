@@ -150,11 +150,11 @@ export default function Navbar() {
           </Link>
 
           <Link href="/blogs" className="menu-link">
-            <span>05</span> Blogs
+            <span>05</span> Articles & Insights
           </Link>
 
           <Link href="/testimonials" className="menu-link">
-            <span>06</span> Testimonials
+            <span>06</span> Experiences That Speak
           </Link>
 
           <Link href="/awards" className="menu-link">
@@ -166,7 +166,7 @@ export default function Navbar() {
           </Link>
 
           <Link href="/faqs" className="menu-link">
-            <span>09</span> Real Estate FAQs
+            <span>09</span> Your Property Questions Answered
           </Link>
 
           <Link href="/csr" className="menu-link">
@@ -178,7 +178,7 @@ export default function Navbar() {
           </Link>
 
           <Link href="/contact" className="menu-link">
-            <span>12</span> Reach Us
+            <span>12</span> Begin Your Journey With Us
           </Link>
         </nav>
         <div className="sidebar-bottom-section">
@@ -215,7 +215,7 @@ export default function Navbar() {
               <FaYoutube />
             </a>
 
-            <a href="tel:+919999999999">
+            <a href="tel:+9560895659">
               <FaPhoneAlt />
             </a>
           </div>

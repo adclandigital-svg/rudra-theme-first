@@ -23,11 +23,11 @@ export default function FeatureSection() {
 
   const features = [
     { icon: Home, title: "Modern Architectural Design" },
-    { icon: Palette, title: "Customized Construction Solutions" },
-    { icon: ClipboardList, title: "Free Site Consultation & Planning" },
-    { icon: BadgeDollarSign, title: "Transparent Costing System" },
-    { icon: UserCheck, title: "Expert Project Execution" },
-    { icon: Clock, title: "On-Time Project Delivery" },
+    { icon: Palette, title: "Curated Construction Expertise" },
+    { icon: ClipboardList, title: "Expert Site Consultation & Strategy" },
+    { icon: BadgeDollarSign, title: "Transparent Pricing Framework" },
+    { icon: UserCheck, title: "Elite Execution Standards" },
+    { icon: Clock, title: "Scheduled Delivery Excellence" },
   ];
 
   return (

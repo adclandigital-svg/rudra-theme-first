@@ -20,12 +20,12 @@ export default function SampleFlatGallery() {
     {
       thumb: "/projects/aquacase/aquacasa-sf-big3.jpg",
       full: "/projects/aquacase/aquacasa-sf-big3.jpg",
-      title: "Kitchen",
+      title: "Gourmet Kitchen",
     },
     {
       thumb: "/projects/aquacase/aquacasa-sf-big4.jpg",
       full: "/projects/aquacase/aquacasa-sf-big4.jpg",
-      title: "Toilets",
+      title: "Bathrooms",
     },
   ];
 

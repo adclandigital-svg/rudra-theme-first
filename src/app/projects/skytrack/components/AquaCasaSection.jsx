@@ -145,7 +145,7 @@ export default function AquaCasaSection() {
   return (
     <section className="aqua-section">
       <span className="aqua-subtitle">MODERN AND COMFORTABLE</span>
-      <h2 className="aqua-title">Facilities and Amenities</h2>
+      <h2 className="aqua-title">Elevated Lifestyle Experiences</h2>
 
       <div className="aqua-grid">
         {features.map((item, index) => (

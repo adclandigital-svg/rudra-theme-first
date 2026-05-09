@@ -15,7 +15,7 @@
 }
 
 .feature-container {
-  max-width: 1400px;
+  max-width: 1600px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 30px;

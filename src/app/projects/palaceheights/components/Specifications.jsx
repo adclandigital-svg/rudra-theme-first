@@ -59,7 +59,7 @@ const specs = [
   },
 
   {
-    title: "Kitchen",
+    title: "Gourmet Kitchen",
     items: [
       {
         label: "Walls",
@@ -98,7 +98,7 @@ const specs = [
   },
 
   {
-    title: "Master Toilet",
+    title: "Bath Suite",
     items: [
       { label: "Walls", value: "Ceramic Tiles up to 7 ft height" },
       { label: "Floor", value: "Anti-Skid Ceramic Tiles" },
@@ -117,7 +117,7 @@ const specs = [
   },
 
   {
-    title: "Other Toilets",
+    title: "Other Bathrooms",
     items: [
       { label: "Walls", value: "Ceramic Tiles up to 7 ft height" },
       { label: "Floor", value: "Anti-Skid Vitrified Tiles" },

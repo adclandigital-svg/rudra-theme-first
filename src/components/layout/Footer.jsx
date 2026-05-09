@@ -43,11 +43,11 @@ export default function Footer() {
             <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
             <Link href="/media-centre">Media Centre</Link>
-            <Link href="/blogs">Blogs</Link>
-            <Link href="/testimonials">Testimonials</Link>
+            <Link href="/blogs">Articles & Insights</Link>
+            <Link href="/testimonials">Experiences That Speak</Link>
             <Link href="/awards">Awards</Link>
             <Link href="/careers">Careers</Link>
-            <Link href="/contact">Reach Us</Link>
+            <Link href="/contact">Begin Your Journey With Us</Link>
           </div>
 
           {/* PROJECTS */}
@@ -68,7 +68,7 @@ export default function Footer() {
             <Link href="/construction-updates">Construction Updates</Link>
             <Link href="/jv-dma-projects">Projects in JV & DMA</Link>
 
-            <Link href="/faqs">Real Estate FAQs</Link>
+            <Link href="/faqs">Your Property Questions Answered</Link>
 
             <Link href="/csr">CSR Activities</Link>
 

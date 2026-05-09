@@ -61,7 +61,7 @@ export default function NewsSection() {
         {/* LEFT SIDE */}
         <div className="news-left">
           <h2>
-            Latest <span>News</span>
+            News<span>& Insights</span>
           </h2>
 
           <p>

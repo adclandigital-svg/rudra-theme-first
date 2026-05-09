@@ -55,7 +55,7 @@ export default function TestimonialSection() {
       <section className="testimonial-section" ref={testimonial}>
         <div className="testimonial-header">
           <h2>
-            What Our <span>Clients Say</span>
+            Experiences <span>That Speak</span>
           </h2>
           <p>
             Real experiences from our valued clients who trusted Rudra Buildcon.

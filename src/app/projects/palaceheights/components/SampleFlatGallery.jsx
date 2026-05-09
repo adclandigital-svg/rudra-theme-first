@@ -10,7 +10,7 @@ export default function SampleFlatGallery() {
   {
     thumb: "/projects/palace-heights/palaceheight-sf-big1.jpg",
     full: "/projects/palace-heights/palaceheight-sf-big1.jpg",
-    title: "Kitchen",
+    title: "Gourmet Kitchen",
   },
   {
     thumb: "/projects/palace-heights/palaceheight-sf-big2.jpg",
@@ -20,7 +20,7 @@ export default function SampleFlatGallery() {
   {
     thumb: "/projects/palace-heights/palaceheight-sf-big3.jpg",
     full: "/projects/palace-heights/palaceheight-sf-big3.jpg",
-    title: "Toilets",
+    title: "Bathrooms",
   },
   {
     thumb: "/projects/palace-heights/palaceheight-sf-big4.jpg",

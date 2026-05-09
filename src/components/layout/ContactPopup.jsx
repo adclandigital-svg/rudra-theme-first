@@ -31,7 +31,7 @@ export default function ContactPopup() {
           ✕
         </button>
 
-        <h2>Let’s Build Something Amazing</h2>
+        <h2>Start Your Next Landmark</h2>
         <p>Get in touch with our team today.</p>
 
         <form className="popup-form">

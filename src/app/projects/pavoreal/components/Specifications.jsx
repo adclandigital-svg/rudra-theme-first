@@ -42,7 +42,7 @@ const specs = [
   },
 
   {
-    title: "Kitchen",
+    title: "Gourmet Kitchen",
     items: [
       { label: "Floor", value: "Vitrified Tiles" },
       {
@@ -66,7 +66,7 @@ const specs = [
   },
 
   {
-    title: "Toilets",
+    title: "Bath Suite",
     items: [
       { label: "Floor", value: "Ceramic Tiles" },
       {
