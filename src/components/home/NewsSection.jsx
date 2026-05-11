@@ -61,7 +61,7 @@ export default function NewsSection() {
         {/* LEFT SIDE */}
         <div className="news-left">
           <h2>
-            News<span>& Insights</span>
+            News <span>& Insights</span>
           </h2>
 
           <p>
@@ -70,8 +70,6 @@ export default function NewsSection() {
             into our ongoing and completed projects, innovative building
             practices, and trends shaping the real estate industry.
           </p>
-
-          <button>View All News</button>
         </div>
 
         {/* RIGHT SIDE */}

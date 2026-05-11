@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import "./about.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,7 @@ const images = [
 ];
 
 export default function RudraAbout() {
+  const router = useRouter();
   const sectionRef = useRef(null);
 
   const [index, setIndex] = useState(0); // ✅ MISSING (IMPORTANT)
@@ -76,9 +78,12 @@ export default function RudraAbout() {
             believe in transparency, timely delivery, and building long-lasting
             relationships with our clients.{" "}
           </p>{" "}
-          <button className="rudra-btn animate">
-            Explore Our Projects
-          </button>{" "}
+          <button
+            className="rudra-btn animate"
+            onClick={() => router.push("/contact")}
+          >
+            Begin Your Journey With Us
+          </button>
         </div>
 
         {/* RIGHT IMAGE ANIMATION */}

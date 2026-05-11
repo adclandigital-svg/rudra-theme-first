@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import { useRouter } from "next/navigation";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,6 +10,7 @@ import "./homereels.css";
 
 const projects = [
   {
+    url: "/projects/aquacasa",
     name: "Palace Heights",
     src: "/large.mp4",
     location: "Greater Noida",
@@ -18,6 +20,7 @@ const projects = [
     desc: "A contemporary high-rise residential development offering smartly designed homes with efficient layouts, natural light, ventilation, and modern amenities for a comfortable urban lifestyle in Greater Noida.",
   },
   {
+    url: "/projects/palaceheights",
     name: "Aquacasa",
     src: "/large.mp4",
     location: "Noida Extension",
@@ -28,6 +31,7 @@ const projects = [
   },
 
   {
+    url: "/projects/pavoreal",
     name: "Pavo Real",
     src: "/large.mp4",
     location: "Delhi NCR",
@@ -38,6 +42,7 @@ const projects = [
   },
 
   {
+    url: "/projects/skytrack",
     name: "Skytracks",
     src: "/large.mp4",
     location: "Noida",
@@ -48,6 +53,7 @@ const projects = [
   },
 
   {
+    url: "/projects/uno",
     name: "Uno",
     src: "/large.mp4",
     location: "Ghaziabad",
@@ -63,6 +69,7 @@ export default function Homereels() {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const activeProject = projects[activeIndex];
+  const router = useRouter();
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.realIndex);
@@ -147,7 +154,12 @@ export default function Homereels() {
 
         <p className="project-desc">{projects[activeIndex].desc}</p>
 
-        <button className="project-btn">View Full Project →</button>
+        <button
+          className="project-btn"
+          onClick={() => router.push(`${projects[activeIndex].url}`)}
+        >
+          View Full Project →
+        </button>
       </div>
     </div>
   );
